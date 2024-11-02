@@ -1,0 +1,57 @@
+$breakpointsDown : (
+  // 'phone'          : '(max-width:  360px)',
+  // 'large-phone'    : '(max-width:  480px)',
+  // 'small-tablet'   : '(max-width:  600px)',
+  // 'tablet'         : '(max-width:  768px)',
+  // 'large-tablet'   : '(max-width: 1024px)',
+  // 'laptop'         : '(max-width: 1280px)',
+  // 'large-laptop'   : '(max-width: 1366px)',
+  // 'ultra'          : '(max-width: 1600px)'
+  '2xs':  '(max-width: 360px)',
+  'xs':   '(max-width: 480px)',
+  'sm':   '(max-width: 640px)',
+  'md':   '(max-width: 768px)',
+  'lg':   '(max-width: 1024px)',
+  'xl':   '(max-width: 1280px)',
+  // '1xl':  '(max-width: 1366px)',
+  '2xl':  '(max-width: 1536px)',
+);
+
+$breakpointsUp   : (
+  // 'phone'        : '(min-width:  360px)',
+  // 'large-phone'  : '(min-width:  480px)',
+  // 'small-tablet' : '(min-width:  600px)',
+  // 'tablet'       : '(min-width:  768px)',
+  // 'large-tablet' : '(min-width: 1024px)',
+  // 'laptop'       : '(min-width: 1280px)',
+  // 'large-laptop' : '(min-width: 1366px)',
+  // 'ultra'        : '(min-width: 1600px)'
+  '2xs':  '(min-width: 360px)',
+  'xs':   '(min-width: 480px)',
+  'sm':   '(min-width: 640px)',
+  'md':   '(min-width: 768px)',
+  'lg':   '(min-width: 1024px)',
+  'xl':   '(min-width: 1280px)',
+  // '1xl':  '(min-width: 1366px)',
+  '2xl':  '(min-width: 1536px)',
+);
+
+// $rwd-phone        : 360;
+// $rwd-large-phone  : 480;
+// $rwd-small-tablet : 600;
+// $rwd-tablet       : 768;
+// $rwd-large-tablet : 1024;
+// $rwd-laptop       : 1280;
+// $rwd-large-laptop : 1366;
+// $rwd-ultra        : 1600;
+
+$rwd-2xs:  360;
+$rwd-xs:   480;
+$rwd-sm:   640;
+$rwd-md:   768;
+$rwd-lg:   1024;
+$rwd-xl:   1280;
+// $rwd-1xl:  1366;
+$rwd-2xl:  1536;
+
+$width-mobile: 390;

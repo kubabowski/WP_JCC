@@ -1,0 +1,9 @@
+{
+  "name": "crafton/theme-manager",
+  "description": "Crafton wordpress theme manager",
+  "autoload": {
+    "psr-4": {
+      "ThemeClasses\\": "functions/classes"
+    }
+  }
+}

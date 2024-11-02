@@ -1,0 +1,194 @@
+.menuButton {
+  $root: &;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  color: $c-primary;
+  transition: color $tr;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    // &:hover {
+    //   color: $c-clear-skies-90;
+    // }
+
+    // &--active:hover {
+    //   color: $c-clear-skies-90;
+    // }
+  }
+
+  [data-dark] &,
+  &--white {
+    color: $c-white;
+
+    @media (hover: hover) {
+      // &:hover {
+      //   color: $c-clear-skies-10;
+      // }
+
+      // &--active:hover {
+      //   color: $c-clear-skies-10;
+      // }
+    }
+  }
+
+  &__bars {
+    position: relative;
+    width: 2.4rem;
+    height: 2.4rem;
+    overflow: hidden;
+    transition: transform $tr;
+
+    @media (hover: hover) {
+      #{$root}--active:hover & {
+        @include nortl {
+          transform: rotate(-1turn);
+        }
+        @include rtl {
+          transform: rotate(1turn);
+        }
+      }
+    }
+  }
+
+  &__bar {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform $tr;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: currentColor;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      animation-fill-mode: forwards;
+      animation-duration: $tr;
+      margin-top: -1px;
+    }
+
+    #{$root}:not(#{$root}--active) & {
+      &--1 { transform: translateY(-30%); }
+      &--2 { transform: translateY(0%); }
+      &--3 { transform: translateY(30%); }
+
+      @include nortl {
+        &--1::before { animation-name: menu-button-bar-1-leave; }
+        &--2::before { animation-name: menu-button-bar-2-leave; }
+        &--3::before { animation-name: menu-button-bar-3-leave; }
+      }
+      @include rtl {
+        &--1::before { animation-name: menu-button-bar-1-rtl-leave; }
+        &--2::before { animation-name: menu-button-bar-2-rtl-leave; }
+        &--3::before { animation-name: menu-button-bar-3-rtl-leave; }
+      }
+    }
+
+    #{$root}--active & {
+      &--1 { transform: rotate(135deg); }
+      &--2 { transform: scaleX(0); }
+      &--3 { transform: rotate(-135deg); }
+    }
+
+    @keyframes menu-button-bar-1-hover {
+      0% { transform: translateX(0); }
+      35% { transform: translateX(15%); }
+      65% { transform: translateX(35%); }
+      100% { transform: translateX(15%); }
+    }
+
+    @keyframes menu-button-bar-2-hover {
+      0% { transform: translateX(0); }
+      35% { transform: translateX(65%); }
+      65% { transform: translateX(15%); }
+      100% { transform: translateX(35%); }
+    }
+
+    @keyframes menu-button-bar-3-hover {
+      0% { transform: translateX(0); }
+      35% { transform: translateX(35%); }
+      65% { transform: translateX(15%); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes menu-button-bar-1-leave {
+      0% { transform: translateX(15%); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes menu-button-bar-2-leave {
+      0% { transform: translateX(35%); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes menu-button-bar-3-leave {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes menu-button-bar-1-rtl-hover {
+      0% { transform: translateX(0); }
+      35% { transform: translateX(-15%); }
+      65% { transform: translateX(-35%); }
+      100% { transform: translateX(-15%); }
+    }
+
+    @keyframes menu-button-bar-2-rtl-hover {
+      0% { transform: translateX(0); }
+      35% { transform: translateX(-65%); }
+      65% { transform: translateX(-15%); }
+      100% { transform: translateX(-35%); }
+    }
+
+    @keyframes menu-button-bar-3-rtl-hover {
+      0% { transform: translateX(0); }
+      35% { transform: translateX(-35%); }
+      65% { transform: translateX(-15%); }
+      100% { transform: translateX(-0); }
+    }
+
+    @keyframes menu-button-bar-1-rtl-leave {
+      0% { transform: translateX(-15%); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes menu-button-bar-2-rtl-leave {
+      0% { transform: translateX(-35%); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes menu-button-bar-3-rtl-leave {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(0); }
+    }
+
+    @media (hover: hover) {
+      #{$root}:not(#{$root}--active):hover & {
+        &::before {
+          animation-duration: 0.8s;
+        }
+
+        @include nortl {
+          &--1::before { animation-name: menu-button-bar-1-hover; }
+          &--2::before { animation-name: menu-button-bar-2-hover; }
+          &--3::before { animation-name: menu-button-bar-3-hover; }
+        }
+        @include rtl {
+          &--1::before { animation-name: menu-button-bar-1-rtl-hover; }
+          &--2::before { animation-name: menu-button-bar-2-rtl-hover; }
+          &--3::before { animation-name: menu-button-bar-3-rtl-hover; }
+        }
+      }
+    }
+  }
+}

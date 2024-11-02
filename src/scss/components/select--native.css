@@ -1,0 +1,54 @@
+.select {
+  @apply block
+    relative
+    w-full
+    overflow-hidden
+    rounded-4px;
+}
+.select__select {
+  @apply font-main
+      block
+      w-full
+      h-40px
+      px-16px
+      py-[7px]
+      text-16px/24px
+      text-field-text
+      bg-white
+      border
+      border-field-border
+      rounded-4px
+      shadow-none
+      pe-40px
+      appearance-none
+      transition-colors
+      hover:border-neutral-700;
+}
+.select__icon {
+  @apply block
+      absolute
+      end-16px
+      bottom-10px
+      text-20px/1
+      text-field-text
+      pointer-events-none
+      z-10;
+}
+.select__line {
+  @apply block
+      absolute
+      bottom-0
+      left-0
+      right-0
+      h-[2px]
+      bg-neutral-950
+      transition-transform
+      scale-x-0
+      pointer-events-none;
+}
+.select__select:active ~ .select__line {
+  @apply scale-x-[.33];
+}
+.select__select:focus-visible ~ .select__line {
+  @apply scale-x-100;
+}/*# sourceMappingURL=select--native.css.map */

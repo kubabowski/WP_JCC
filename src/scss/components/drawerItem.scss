@@ -1,0 +1,72 @@
+.drawerItem {
+  $root: &;
+  @apply
+    flex
+    items-center
+    gap-8px
+    relative
+    rounded-4px
+    min-h-36px
+    py-8px
+    px-16px
+    font-semibold
+    text-14px/20px
+    transition-colors
+    focus-visible:shadow-focus-inner
+  ;
+
+  &::before {
+    content: '';
+    @apply
+      block
+      absolute
+      start-0
+      top-6px
+      bottom-6px
+      w-6px
+      rounded-4px
+      transition-colors
+    ;
+  }
+
+  .icon {
+    @apply
+      flex-shrink-0
+      text-16px/1
+    ;
+  }
+
+  &:hover {
+    @apply
+      bg-neutral
+      before:bg-neutral-400
+    ;
+  }
+  &:active {
+    @apply
+      bg-neutral-active
+      before:bg-neutral-800
+    ;
+  }
+
+  &--active ,
+  &[data-active] {
+    @apply
+      bg-neutral-active
+      before:bg-primary
+    ;
+
+    &:hover {
+      @apply
+        bg-neutral-active
+        before:bg-primary
+      ;
+    }
+    &:active {
+      @apply
+        bg-neutral-active
+        before:bg-primary
+      ;
+    }
+  }
+}

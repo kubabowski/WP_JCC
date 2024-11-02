@@ -1,0 +1,83 @@
+// // $wrapper-margin: fluidValue(142, 20, $width-mobile); // linear
+// $wrapper-margin: fluidValue(150, 60, $rwd-tablet);
+// $wrapper-margin-mobile: fluidValue(60, 30, $width-mobile, $rwd-tablet);
+// $wrapper-negative-margin: fluidValue(-150, -60, $rwd-tablet);
+// $wrapper-negative-margin-mobile: fluidValue(-60, -30, $width-mobile, $rwd-tablet);
+
+// $wrapper-half-margin: calc($wrapper-margin / 2);
+// $wrapper-half-margin-mobile: calc($wrapper-margin-mobile / 2);
+// $wrapper-half-negative-margin: calc($wrapper-negative-margin / 2);
+// $wrapper-half-negative-margin-mobile: calc($wrapper-negative-margin-mobile / 2);
+
+// $wrapper-margin-wide: fluidValue(32, 24, $width-mobile);
+// $wrapper-half-margin-wide: calc($wrapper-margin-wide / 2);
+
+// .wrapper {
+//   // margin-inline: $wrapper-margin; // linear
+//   margin-inline: $wrapper-margin-mobile;
+
+//   @include rwd('tablet') {
+//     margin-inline: $wrapper-margin;
+//   }
+
+//   &--wide {
+//     margin-inline: $wrapper-margin-wide;
+
+//     @include rwd('tablet') {
+//       margin-inline: $wrapper-margin-wide;
+//     }
+//   }
+// }
+
+:root {
+  --wrapper-space: theme(spacing.16px);
+  @media (screen(xs)) { --wrapper-space: theme(spacing.24px); }
+  @media (screen(sm)) { --wrapper-space: theme(spacing.32px); }
+  @media (screen(md)) { --wrapper-space: theme(spacing.48px); }
+  @media (screen(lg)) { --wrapper-space: theme(spacing.64px); }
+  @media (screen(xl)) { --wrapper-space: theme(spacing.96px); }
+  @media (screen(1xl)) { --wrapper-space: theme(spacing.112px); }
+  // @media (screen(2xl)) { --wrapper-space: theme(spacing.0); }
+
+  // --wrapper-space-wide: theme(spacing.16px);
+  // @media (screen(xs)) { --wrapper-space-wide: theme(spacing.24px); }
+  // @media (screen(sm)) { --wrapper-space-wide: theme(spacing.32px); }
+  // @media (screen(2xl)) { --wrapper-space-wide: theme(spacing.0); }
+}
+
+.wrapper {
+  @apply
+    mx-[--wrapper-space]
+    2xl:mx-auto
+    2xl:max-w-[76rem] // 1216/16
+  ;
+  // 2xl:max-w-[1216px]
+
+  // margin-inline: auto;
+  // max-width: size(1320);
+  // margin-inline: size(96);
+
+  // &--wide {
+  //   @apply
+  //     mx-[--wrapper-space-wide]
+  //     2xl:mx-auto
+  //     2xl:max-w-[90.5rem]
+  //   ;
+  //   // 2xl:max-w-[1448px]
+
+  //   // max-width: size(1448);
+  //   // margin-inline: size(32);
+  // }
+
+  &--full {
+    @apply
+      mx-0
+      2xl:mx-auto
+      2xl:max-w-[90rem]
+    ;
+    // 2xl:max-w-[1440px]
+
+    // margin-inline: 0;
+    // max-width: size(1512);
+  }
+}

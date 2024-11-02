@@ -1,0 +1,95 @@
+$c-black: #000000;
+$c-white: #FFFFFF;
+
+// $c-gray-25: #FCFCFD;
+// $c-gray-50: #F9FAFB;
+// $c-gray-100: #F3F4F6;
+// $c-gray-200: #E5E7EB;
+// $c-gray-300: #D2D6DB;
+// $c-gray-400: #9DA4AE;
+// $c-gray-500: #6C737F;
+// $c-gray-600: #4D5761;
+// $c-gray-700: #384250;
+// $c-gray-800: #1F2A37;
+// $c-gray-900: #111927;
+// $c-gray-950: #0D121C;
+
+// $c-sa-25: #F7FDF9;
+// $c-sa-50: #F3FCF6;
+// $c-sa-100: #DFF6E7;
+// $c-sa-200: #B8EACB;
+// $c-sa-300: #88D8AD;
+// $c-sa-400: #54C08A;
+// $c-sa-500: #25935F;
+// $c-sa-600: #1B8354;
+// $c-sa-700: #166A45;
+// $c-sa-800: #14573A;
+// $c-sa-900: #104631;
+// $c-sa-950: #092A1E;
+
+// $c-gold-25: #FFFEF7;
+// $c-gold-50: #FFFEF2;
+// $c-gold-100: #FFFCE6;
+// $c-gold-200: #FCF3BD;
+// $c-gold-300: #FAE996;
+// $c-gold-400: #F7D54D;
+// $c-gold-500: #F5BD02;
+// $c-gold-600: #DBA102;
+// $c-gold-700: #B87B02;
+// $c-gold-800: #945C01;
+// $c-gold-900: #6E3C00;
+// $c-gold-950: #472400;
+
+// $c-lavender-25: #FEFCFF;
+// $c-lavender-50: #F9F5FA;
+// $c-lavender-100: #F2E9F5;
+// $c-lavender-200: #E1CCE8;
+// $c-lavender-300: #CCADD9;
+// $c-lavender-400: #A57BBA;
+// $c-lavender-500: #80519F;
+// $c-lavender-600: #6D428F;
+// $c-lavender-700: #532D75;
+// $c-lavender-800: #3D1D5E;
+// $c-lavender-900: #281047;
+// $c-lavender-950: #16072E;
+
+// $g-sa-600-500-90: linear-gradient(90deg, $c-sa-600, $c-sa-500);
+// $g-sa-700-600-45: linear-gradient(45deg, $c-sa-700, $c-sa-600);
+// $g-sa-950-600-45: linear-gradient(45deg, $c-sa-950, $c-sa-600);
+// $g-sa-800-600-90: linear-gradient(90deg, $c-sa-800, $c-sa-600);
+// $g-sa-800-700-26_5: linear-gradient(26.5deg, $c-sa-800, $c-sa-700);
+// $g-sa-900-600-45: linear-gradient(45deg, $c-sa-900, $c-sa-600);
+
+// $c-primary: #228355; // AR DS TMP
+// $c-primary-bg: #0d4d32; // AR DS TMP
+
+// dark theme
+// $c-text-primary: $c-sa-950;
+// $c-text-secondary: $c-sa-700;
+// $c-text-tertiary: $c-sa-600;
+
+// dark theme
+// $c-text-primary: $c-white;
+// $c-text-secondary: rgba($c-white, 0.7);
+// $c-text-tertiary: rgba($c-white, 0.6);
+
+// light theme
+$c-default: #1D1819;
+$c-primary: #EF3E2C;
+// $c-primary-hover: $c-sa-700;
+// $c-primary-active: $c-sa-900;
+// $c-primary-focus: $c-sa-800;
+// $c-primary-800: $c-sa-800;
+// $c-primary-25: $c-sa-25;
+
+// $c-neutral: $c-white;
+// $c-neutral-hover: $c-gray-100;
+// $c-neutral-active: $c-gray-200;
+// $c-neutral-focus: $c-white;
+// $c-neutral-100: $c-gray-100;
+
+$c-selection-bg: $c-primary;
+$c-selection: $c-white;
+
+$c-text: $c-default;
+$c-bg: $c-white;

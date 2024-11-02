@@ -1,0 +1,96 @@
+.customScroll {
+  $root: &;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  min-height: 0;
+  min-width: 0;
+  z-index: 0;
+
+  &__scroll {
+    z-index: 0;
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    @include hiddenScroll;
+  }
+
+  &__track {
+    z-index: 1;
+    position: absolute;
+    border-radius: 0.5rem;
+    background-color: $c-pale-blue;
+    transition: opacity $tr, visibility $tr;
+
+    &--v {
+      top: 1.2rem;
+      bottom: 1.2rem;
+      width: 0.9rem;
+      inset-inline-end: 0;
+      margin-inline-end: 0.9rem;
+    }
+
+    &--h {
+      inset-inline-start: 1.2rem;
+      inset-inline-end: 1.2rem;
+      height: 0.9rem;
+      bottom: 0;
+      margin-bottom: 0.9rem;
+    }
+
+    &--hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__bar {
+    z-index: 1;
+    position: absolute;
+    cursor: grab;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 0.5rem;
+      background-color: $c-clear-skies-90;
+      transition: background-color $tr;
+    }
+
+    &--v {
+      top: 0;
+      height: 100%;
+      left: -0.4rem;
+      right: -0.4rem;
+
+      &::before {
+        top: 0;
+        bottom: 0;
+        left: 0.4rem;
+        right: 0.4rem;
+      }
+    }
+
+    &--h {
+      inset-inline-start: 0;
+      width: 100%;
+      top: -0.4rem;
+      bottom: -0.4rem;
+
+      &::before {
+        top: 0.4rem;
+        bottom: 0.4rem;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover::before {
+        background-color: $c-clear-skies-80;
+      }
+    }
+  }
+}

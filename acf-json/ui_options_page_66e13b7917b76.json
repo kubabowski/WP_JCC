@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_66e13b7917b76",
+    "title": "Nagłówek (opcje)",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Nagłówek (opcje)",
+    "menu_slug": "header_options",
+    "parent_slug": "options-general.php",
+    "advanced_configuration": 0,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": false,
+    "description": "",
+    "menu_icon": [],
+    "update_button": "Aktualizuj",
+    "updated_message": "Ustawienia zostały zaktualizowane",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1726036984
+}

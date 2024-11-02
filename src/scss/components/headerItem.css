@@ -1,0 +1,53 @@
+.headerItem {
+  @apply flex
+    items-center
+    gap-4px
+    relative
+    rounded-4px
+    h-header-height
+    py-8px
+    px-16px
+    font-medium
+    text-16px/24px
+    transition-colors
+    focus-visible:shadow-focus-inner;
+}
+.headerItem::before {
+  content: "";
+  @apply block
+      absolute
+      bottom-0
+      left-8px
+      right-8px
+      h-6px
+      rounded-4px
+      transition-colors;
+}
+.headerItem .icon {
+  @apply flex-shrink-0
+      text-24px/1;
+}
+.headerItem--vertical {
+  @apply flex-col;
+}
+.headerItem:hover {
+  @apply bg-neutral
+      before:bg-neutral-400;
+}
+.headerItem:active {
+  @apply bg-neutral-active
+      before:bg-neutral-800;
+}
+.headerItem--active, .headerItem[data-active] {
+  @apply text-white
+      bg-primary
+      before:bg-primary-400;
+}
+.headerItem--active:hover, .headerItem[data-active]:hover {
+  @apply bg-primary-hover
+        before:bg-primary-400;
+}
+.headerItem--active:active, .headerItem[data-active]:active {
+  @apply bg-primary-active
+        before:bg-primary-400;
+}/*# sourceMappingURL=headerItem.css.map */

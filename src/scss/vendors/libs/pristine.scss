@@ -1,0 +1,23 @@
+
+
+.validation {
+  &Field {
+    position: relative;
+  }
+
+  @keyframes errorfadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  &ErrorMsg {
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 0.2rem 0;
+    margin-bottom: -2rem;
+    color: $cRed01;
+    animation-name: errorfadein;
+    animation-duration: $tr;
+  }
+}

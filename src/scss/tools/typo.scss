@@ -1,0 +1,43 @@
+@mixin typo($typoName: '') {
+  @if ($typoName == 'text') {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: math.div(26, 14);
+
+    @include rwd('tablet') {
+      font-size: 1.4rem;
+    }
+  } @else if ($typoName == 'label'){
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: math.div(28, 16);
+
+    @include rwd('tablet') {
+      font-size: 2rem;
+    }
+  } @else if ($typoName == 'headline'){
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: math.div(36, 24);
+
+    @include rwd('tablet') {
+      font-size: 2.4rem;
+    }
+  } @else if ($typoName == 'header'){
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: math.div(36, 36);
+
+    @include rwd('tablet') {
+      font-size: 3.6rem;
+    }
+  } @else if ($typoName == 'title'){
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: math.div(54, 48);
+
+    @include rwd('tablet') {
+      font-size: 4.8rem;
+    }
+  }
+}

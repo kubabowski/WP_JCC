@@ -1,0 +1,217 @@
+// @font-face {
+//     font-family: "aeonik";
+//     src: url("../assets/fonts-webkit/aeonik-black-webfont.woff2") format("woff2"),
+//       url("../assets/fonts-webkit/aeonik-black-webfont.woff") format("woff");
+//     font-weight: 900; /* Black */
+//     font-style: normal;
+//   }
+  
+//   @font-face {
+//     font-family: "aeonik";
+//     src: url("../assets/fonts-webkit/aeonik-bold-webfont.woff2") format("woff2"),
+//       url("../assets/fonts-webkit/aeonik-bold-webfont.woff") format("woff");
+//     font-weight: 700; /* Bold */
+//     font-style: normal;
+//   }
+  
+//   @font-face {
+//     font-family: "aeonik";
+//     src: url("../assets/fonts-webkit/aeonik-medium-webfont.woff2") format("woff2"),
+//       url("../assets/fonts-webkit/aeonik-medium-webfont.woff") format("woff");
+//     font-weight: 500; /* Medium */
+//     font-style: normal;
+//   }
+  
+//   @font-face {
+//     font-family: "aeonik";
+//     src: url("../assets/fonts-webkit/aeonik-regular-webfont.woff2")
+//         format("woff2"),
+//       url("../assets/fonts-webkit/aeonik-regular-webfont.woff") format("woff");
+//     font-weight: 400; /* Regular */
+//     font-style: normal;
+//   }
+  
+//   @font-face {
+//     font-family: "aeonik";
+//     src: url("../assets/fonts-webkit/aeonik-thin-webfont.woff2") format("woff2"),
+//       url("../assets/fonts-webkit/aeonik-thin-webfont.woff") format("woff");
+//     font-weight: 100; /* Thin */
+//     font-style: normal;
+//   }
+  
+//   @font-face {
+//     font-family: "aeonik";
+//     src: url("../assets/fonts-webkit/aeonik-air-webfont.woff2") format("woff2"),
+//       url("../assets/fonts-webkit/aeonik-air-webfont.woff") format("woff");
+//     font-weight: 200; /* Air */
+//     font-style: normal;
+//   }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .t-white {
+    color: white;
+  }
+
+  .t-white-72 {
+    color: rgba(255,255,255,0.72);
+  }
+
+  .color-blue {
+    color: var(--color-blue);
+  }
+
+  .fw-100 {
+    font-weight: 100 !important;
+  }
+  
+  .fw-200 {
+    font-weight: 200 !important;
+  }
+  
+  .fw-300 {
+    font-weight: 300 !important;
+  }
+  
+  .fw-400 {
+    font-weight: 400 !important;
+  }
+  
+  .fw-500 {
+    font-weight: 500 !important;
+  }
+  
+  .fw-600 {
+    font-weight: 600 !important;
+  }
+  
+  .fw-700 {
+    font-weight: 700 !important;
+  }
+  
+  .fw-800 {
+    font-weight: 800 !important;
+  }
+  
+  .fw-900 {
+    font-weight: 900 !important;
+  }
+  
+  
+  .fs-12 {
+    font-size: calc(calc(12/16) * 1rem) !important;
+  }
+  
+  .fs-14 {
+    font-size: calc(calc(14/16) * 1rem) !important;
+  }
+  
+  .fs-16 {
+    font-size: calc(calc(16/16) * 1rem) !important;
+  }
+  
+  .fs-18 {
+    font-size: calc(calc(18/16) * 1rem) !important;
+  }
+  
+  .fs-20 {
+    font-size: calc(calc(20/16) * 1rem) !important;
+  }
+  
+  .fs-22 {
+    font-size: calc(calc(22/16) * 1rem) !important;
+  }
+  
+  .fs-24 {
+    font-size: calc(calc(24/16) * 1rem) !important;
+  }
+  
+  .fs-28 {
+    font-size: calc(calc(28/16) * 1rem) !important;
+  }
+  
+  .fs-30 {
+    font-size: calc(calc(30/16) * 1rem) !important;
+  }
+  
+  .fs-32 {
+    font-size: calc(calc(32/16) * 1rem) !important;
+  }
+  
+  .fs-36 {
+    font-size: calc(calc(36/16) * 1rem) !important;
+  }
+  
+  .fs-56 {
+    font-size: calc(calc(56/16) * 1rem) !important;
+  }
+  
+  .fs-96 {
+    font-size: calc(calc(96/16) * 1rem) !important;
+  }
+  
+  .lh-14 {
+    line-height: calc(calc(14/16) * 1rem) !important;
+  }
+  
+  .lh-16 {
+    line-height: calc(calc(16/16) * 1rem) !important;
+  }
+  
+  .lh-18 {
+    line-height: calc(calc(18/16) * 1rem) !important;
+  }
+  
+  .lh-20 {
+    line-height: calc(calc(20/16) * 1rem) !important;
+  }
+  
+  .lh-22 {
+    line-height: calc(calc(22/16) * 1rem) !important;
+  }
+  
+  .lh-24 {
+    line-height: calc(calc(24/16) * 1rem) !important;
+  }
+  
+  .lh-26 {
+    line-height: calc(calc(26/16) * 1rem) !important;
+  }
+  
+  .lh-28 {
+    line-height: calc(calc(28/16) * 1rem) !important;
+  }
+  
+  .lh-30 {
+    line-height: calc(calc(30/16) * 1rem) !important;
+  }
+  
+  .lh-32 {
+    line-height: calc(calc(32/16) * 1rem) !important;
+  }
+  
+  .lh-34 {
+    line-height: calc(calc(34/16) * 1rem) !important;
+  }
+  
+  .lh-36 {
+    line-height: calc(calc(36/16) * 1rem) !important;
+  }
+  
+  .lh-38 {
+    line-height: calc(calc(38/16) * 1rem) !important;
+  }
+  
+  .lh-44 {
+    line-height: calc(calc(44/16) * 1rem) !important;
+  }
+  
+  .lh-64 {
+    line-height: calc(calc(64/16) * 1rem) !important;
+  }
+  
+  .lh-96 {
+    line-height: calc(calc(96/16) * 1rem) !important;
+  }

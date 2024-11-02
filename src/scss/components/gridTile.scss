@@ -1,0 +1,103 @@
+.gridTile {
+  $root: &;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  background-color: transparent;
+  transition: background-color $tr;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    margin-inline-end: -100%;
+    height: 0;
+    padding-top: 100%;
+    visibility: hidden;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: currentColor;
+    }
+  }
+
+  &--default,
+  &--turquoise {
+    color: $c-intense-turquoise;
+  }
+
+  &--skies {
+    color: $c-clear-skies-50;
+  }
+
+  &__logo {
+    position: relative;
+    margin-inline: auto;
+    width: calc(100% - 3rem);
+    height: 40%;
+  }
+
+  &__logoImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity $tr;
+
+    &--default {
+      opacity: 1;
+    }
+    &--hover {
+      opacity: 0;
+    }
+
+    @media (hover: hover) {
+      #{$root}:hover & {
+        &--default {
+          opacity: 0;
+        }
+        &--hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    inset-inline-start: 1rem;
+    inset-inline-end: 1rem;
+    @include fontFamily('main');
+    font-weight: $fw-medium;
+    font-size: 1rem;
+    line-height: math.div(12, 10);
+    text-align: center;
+
+    @include nortl() {
+      letter-spacing: 0.2em;
+    }
+
+    #{$root}--default &,
+    #{$root}--turquoise & {
+      color: $c-clear-skies-50;
+    }
+
+    #{$root}--skies & {
+      color: $c-intense-turquoise;
+    }
+
+    &--top {
+      top: 1.5rem;
+    }
+
+    &--bottom {
+      bottom: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+/* after rtl mixin */
+
+@mixin fontFamily($fontName, $rtlSuffix: 'Ar') {
+  @if ($fontName == 'main') {
+    @include nortl {
+      font-family: $f-main;
+    }
+    @include rtl {
+      font-family: $f-main-ar;
+    }
+  } @else if ($fontName == 'sec'){
+    @include nortl {
+      font-family: $f-sec;
+    }
+    @include rtl {
+      font-family: $f-sec-ar;
+    }
+  } @else {
+    @include nortl {
+      font-family: '#{$fontName}';
+    }
+    @include rtl {
+      font-family: '#{$fontName}#{$rtlSuffix}';
+    }
+  }
+}

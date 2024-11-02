@@ -1,0 +1,89 @@
+@use "sass:math";
+@import "utils.scss";
+
+@layer core-base, core-components, core-utilities, core-variants;
+
+@layer core-base {
+  @import "tailwindcss/base";
+}
+@layer core-components {
+  @import "tailwindcss/components";
+}
+@layer core-utilities {
+  @import "tailwindcss/utilities";
+}
+@layer core-variants {
+  @import "tailwindcss/variants";
+}
+
+@layer core-base {
+  // globals
+  // @import 'globals/reset.scss';
+  @import "globals/fonts.scss";
+  @import "globals/icons.scss";
+  @import "globals/document.scss";
+}
+
+@layer core-components {
+  // vendors
+  // @import 'vendors/libs/swiper.scss';
+  // @import 'vendors/libs/glightbox.scss';
+
+  // pre layout components
+  // @import 'components/menuButton.scss';
+
+  // layout
+  @import "layout/wrapper.scss";
+  @import "layout/header.scss";
+  @import "layout/slider.scss";
+  @import "layout/forms.scss";
+  // @import 'layout/mobileMenu.scss';
+  // @import 'layout/page.scss';
+  // @import 'layout/section.scss';
+  // @import 'layout/footer.scss';
+
+  // components
+  // @import 'components/menuButton.scss';
+  // @import 'components/drawerItem.scss';
+  // @import 'components/headerItem.scss';
+  // @import 'components/breadcrumbs.scss';
+  // @import 'components/button.scss';
+  // @import 'components/input.scss';
+  // @import 'components/select--native.scss';
+  // @import 'components/select.scss';
+  // @import 'components/tabItem.scss';
+  // @import 'components/swiper.scss';
+  // @import 'components/scroll.scss';
+  // @import 'components/checkbox.scss';
+  // @import 'components/radio.scss';
+  @import "components/wysiwyg.scss";
+  @import "components/heading.scss";
+  @import "components/suggestionItem.scss";
+  @import "components/customGradientBorder.scss";
+  // @import 'components/heading.scss';
+  // @import 'components/sliderNav.scss';
+  // @import 'components/popup/popup.scss';
+  // @import 'components/popup/videosPopup.scss';
+  // @import 'components/customScroll.scss';
+  // @import 'components/imageBox.scss';
+
+  // sections
+  // @import 'sections/newsletter.scss';
+}
+
+
+@import "globals/variables.scss";
+@import "globals/general.scss";
+@import "globals/text.scss";
+@import "globals/base.scss";
+
+// sections probably to build separately
+@import "content.scss";
+
+@import "./components/swiperjs.css"
+
+
+
+// header {
+//   display: none!important;
+// }

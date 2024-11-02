@@ -1,0 +1,43 @@
+.socialIcons {
+  $root: &;
+
+  display: flex;
+  align-items: center;
+
+  &__item {
+    width: 2.4rem;
+    font-size: 2.4rem;
+    line-height: 1;
+
+    @include rwd('laptop') {
+      width: fluidValue(24, 20);
+      font-size: fluidValue(24, 20);
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: inherit;
+    color: $c-intense-turquoise;
+    transition: color $tr;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $c-clear-skies-90;
+      }
+    }
+
+    [data-dark] &,
+    #{$root}--white & {
+      color: $c-natural-white;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $c-clear-skies-50;
+        }
+      }
+    }
+  }
+}

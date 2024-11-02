@@ -1,0 +1,9 @@
+:root {
+  --header-height: #{(72rem / 16)};
+  // @media (screen(xs)) { --header-height: #{(72rem / 16)}; }
+  // @media (screen(sm)) { --header-height: #{(72rem / 16)}; }
+  @media (screen(md)) { --header-height: #{(116rem / 16)}; }
+  // @media (screen(lg)) { --header-height: #{(116rem / 16)}; }
+  // @media (screen(xl)) { --header-height: #{(116rem / 16)}; }
+  // @media (screen(2xl)) { --header-height: #{(116rem / 16)}; }
+}

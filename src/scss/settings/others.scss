@@ -1,0 +1,14 @@
+$root-font-size: 16px;
+$root-line-height: 1.2;
+
+$unit-size-base: 16;
+$unit-size: 0.0625rem; // = 1px = 1rem / 16 (if $root-font-size === 16px)
+
+$drop-shadow: 0 0.4rem 2rem 0 rgba($c-black, 0.1);
+
+// $header-height-mobile: 9rem;
+// $header-height: fluidValue(100, 70);
+
+$section-padding: fluidValue(100, 50, $width-mobile);
+$section-small-padding: fluidValue(50, 25, $width-mobile);
+$section-large-padding: fluidValue(150, 75, $width-mobile);

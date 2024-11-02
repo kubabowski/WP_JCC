@@ -1,0 +1,92 @@
+.breadcrumbs {
+  $root: &;
+  position: relative;
+  padding-top: 2.2rem;
+  padding-bottom: 3rem;
+  font-size: 1.2rem;
+  line-height: math.div(16, 14);
+  z-index: 5;
+
+  @include rwd('tablet') {
+    font-size: fluidValue(14, 12);
+  }
+
+  // themes begin
+
+  &--white {
+    border-color: $c-gold;
+    color: $c-black;
+
+    #{$root}__item {
+      color: $c-white;
+
+      &:before {
+        color: $c-white;
+      }
+
+      &:last-child {
+        color: $c-white;
+      }
+    }
+
+    #{$root}__link {
+      @media (hover: hover) {
+        &:hover {
+          color: rgba($c-white, 0.66);
+        }
+      }
+    }
+  }
+
+  // themes end
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    color: $c-bbc;
+    font-weight: $fw-light;
+
+    &:before {
+      color: $c-bbc;
+      display: inline-block;
+      margin: 0 0.6em;
+      content: '>';
+
+      // @include nortl {
+      //   content: '>';
+      // }
+
+      // @include rtl {
+      //   content: '>';
+      // }
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      color: $c-gold;
+      font-weight: $fw-medium;
+    }
+  }
+
+  &__link {
+    transition: color $tr;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $c-aqua;
+      }
+    }
+  }
+}

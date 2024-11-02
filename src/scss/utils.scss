@@ -1,0 +1,24 @@
+@use "sass:math";
+
+// settings
+@import 'settings/fonts.scss';
+@import 'settings/icons.scss';
+@import 'settings/colors.scss';
+@import 'settings/zindexes.scss';
+@import 'settings/transitions.scss';
+@import 'settings/breakpoints.scss';
+@import 'settings/others.scss';
+
+// tools
+@import 'tools/functions.scss';
+@import 'tools/fontFace.scss';
+@import 'tools/icons.scss';
+@import 'tools/rwd.scss';
+@import 'tools/rtl.scss';
+@import 'tools/typo.scss';
+// @import 'tools/browser.scss';
+@import 'tools/fontFamily.scss';
+@import 'tools/fluidValue.scss';
+@import 'tools/size.scss';
+@import 'tools/focus.scss';
+@import 'tools/hiddenScroll.scss';

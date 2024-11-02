@@ -1,0 +1,59 @@
+<h2 class="text-40px/1_2 mb-48px">Dobierzmy wspólnie pompę ciepła</h2>
+
+<div class="flex items-center text-24px/1_2 mb-24px mt-48px">
+  <h3 class="flex-shrink-0 -mt-[0.1em] max-w-2/3 text-balance">Dane osobowe</h3>
+  <div class="flex-grow-1 block self-start h-px w-full ms-24px mt-[0.5em] bg-neutral-dark"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16px md:gap-x-32px md:gap-y-24px">
+  <div>
+    [text* firstname id:sf-firstname]
+    <label data-required for="sf-firstname">Imię</label>
+  </div>
+  <div>
+    [text* surname id:sf-surname]
+    <label data-required for="sf-surname">Nazwisko</label>
+  </div>
+  <div>
+    [email* email id:sf-email]
+    <label data-required for="sf-email">E-mail</label>
+  </div>
+  <div>
+    [tel* phone id:sf-phone]
+    <label data-required for="sf-phone">Telefon</label>
+  </div>
+</div>
+
+<div class="flex items-center text-24px/1_2 mb-24px mt-48px">
+  <h3 class="flex-shrink-0 -mt-[0.1em] max-w-2/3 text-balance">Informacje o nieruchomości</h3>
+  <div class="flex-grow-1 block self-start h-px w-full ms-24px mt-[0.5em] bg-neutral-dark"></div>
+</div>
+<div class="grid grid-cols-1 gap-16px md:gap-x-32px md:gap-y-24px">
+  <div>
+    <h4 class="text-18px/1_6 font-medium mb-12px">Jestem właścicielem/współwłaścicielem budynku/lokalu:</h4>
+    [radio building-type use_label_element "budynek mieszkalny jednorodzinny" "wydzielony lokal mieszkalny z wyodrębnioną księgą wieczystą (max 2 lokale w budynku)"]
+  </div>
+  <div>
+    <h4 class="text-18px/1_6 font-medium mb-12px">Czy Twój dochód przekracza 135 tys. rocznie?</h4>
+    [radio income-above-value use_label_element "tak" "nie"]
+  </div>
+  <div>
+    <h4 class="text-18px/1_6 font-medium mb-12px">Jakie jest obecne źródło ciepła?</h4>
+    [radio current-heat use_label_element "piec bezklasowy" "kocioł gazowy" "inne"]
+    <div class="mt-8px ms-36px">
+      [text other-heat placeholder "Napisz jakie inne"]
+    </div>
+  </div>
+  <div>
+    <h4 class="text-18px/1_6 font-medium mb-12px">Kiedy budynek został oddany do użytku?</h4>
+    [radio building-use-from use_label_element "przed 2024" "po 2024"]
+  </div>
+  <div>
+    <h4 class="text-18px/1_6 font-medium mb-12px">Czy planujesz zakup któregoś z poniższych urządzeń?</h4>
+    [checkbox* buying-plan use_label_element "pompa ciepła powietrze/woda" "pompa ciepła powietrze/powietrze" "gruntowa pompa ciepła" "instalacja C.O i C.W.U." "wentylacja mechaniczna (rekuperacja)" "mikroinstalacja fotowoltaiczna" "docieplenie przegród/wymiana okien/drzwi/bram garażowych"]
+  </div>
+</div>
+
+<button type="submit" class="mt-48px flex items-center w-full min-h-[62px] px-20px py-8px text-16px/1_25 lg:text-20px/1_25 font-medium text-neutral-white bg-neutral-red hover:bg-neutral-red/80 justify-center transition-colors">
+  <span>Wyślij zgłoszenie</span><span class="wpcf7-spinner"></span>
+</button>
+<p class="mt-8px text-16px/1_6 text-center text-neutral-gray">Więcej na: <a href="https://www.grzejeco.pl" targe="_blank">www.grzejeco.pl</a></p>

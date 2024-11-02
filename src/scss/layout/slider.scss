@@ -1,0 +1,32 @@
+[data-basic-slider-prev],
+[data-basic-slider-next] {
+  &[disabled] {
+    @apply
+      opacity-20
+      hover:cursor-not-allowed
+    ;
+  }
+}
+
+// [data-basic-slider] {
+[data-basic-slider-thin] {
+  .swiper-slide > div {
+    @apply transition-transform duration-300;
+    // @apply transform scale-50;
+  }
+
+  .swiper-slide-prev > div,
+  .swiper-slide-next > div {
+    @apply transform scale-50;
+  }
+  // .swiper-slide-active > div {
+  //   @apply transform scale-100;
+  // }
+
+  .swiper-slide-prev > div {
+    @apply origin-right;
+  }
+  .swiper-slide-next > div {
+    @apply origin-left;
+  }
+}

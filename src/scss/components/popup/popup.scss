@@ -1,0 +1,88 @@
+.popup {
+  $root: &;
+  z-index: $z-index-popup;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($c-111-134, 0.33);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    background-color: $c-white;
+    width: 100%;
+    border-radius: 0.4rem;
+    border: 1px solid $c-eee-adf;
+    overflow: hidden;
+
+    #{$root}--noClose &,
+    #{$root}--default & {
+      flex-grow: 1;
+      height: 100%;
+      border-radius: 0;
+
+      @include rwd('small-tablet') {
+        flex-grow: 0;
+        height: auto;
+        border-radius: 0.4rem;
+        max-width: fluidValue(832, 380, $width-mobile);
+      }
+    }
+
+    #{$root}--full & {
+      flex-grow: 1;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+
+  &__close {
+    z-index: 1;
+    position: absolute;
+    top: 2rem;
+
+    @include nortl {
+      right: 2rem;
+    }
+    @include rtl {
+      left: 2rem;
+    }
+
+    @include rwd('tablet') {
+      top: fluidValue(50, 20);
+
+      @include nortl {
+        right: fluidValue(50, 20);
+      }
+      @include rtl {
+        left: fluidValue(50, 20);
+      }
+    };
+
+    #{$root}--noClose & {
+      display: none;
+    }
+  }
+
+  // &__scroll {
+  //   // max-height: calc(100vh - 12rem);
+
+  //   // .customScroll__track {
+  //   //   top: 1.6rem;
+  //   //   bottom: 1.6rem;
+  //   // }
+  // }
+
+  &__content {
+    flex-grow: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,26 @@
+$icons: () !default;
+
+@mixin icon($icon) {
+  @if map-has-key($icons, $icon) {
+    & {
+      content: inspect(map-get($icons, $icon)) !important;
+    }
+  } @else {
+    @warn 'Unfortunately, not found icon called `#{$icon}`!';
+  }
+}
+
+@mixin icomoon($icon: '') {
+  @include icon($icon);
+
+  & {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

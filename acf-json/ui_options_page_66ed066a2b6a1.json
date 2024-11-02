@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_66ed066a2b6a1",
+    "title": "Wyszukiwarka  (opcje)",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Wyszukiwarka  (opcje)",
+    "menu_slug": "search_options",
+    "parent_slug": "options-general.php",
+    "advanced_configuration": 0,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": false,
+    "description": "",
+    "menu_icon": [],
+    "update_button": "Aktualizuj",
+    "updated_message": "Ustawienia zostały zaktualizowane",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1726809748
+}

@@ -1,0 +1,63 @@
+#trust_quality_innovation {
+    background-color: var(--trust-bg-color);
+    padding-top: var(--section-margin);
+    padding-bottom: var(--section-margin);
+  }
+  
+  .trust-section {
+    display: flex;
+  
+    .col-1,
+    .col-2 {
+      width: 50%;
+    }
+  
+    .col-1 {
+      padding-right: var(--trust-col1-pr);
+  
+      * {
+        width: max-content;
+        color: #000030;
+      }
+  
+      .h6 {
+        margin-bottom: 16px;
+        text-transform: uppercase;
+      }
+  
+      .badge {
+        padding: 6px 8px;
+        border-radius: 10px;
+        background-color: #aeff78;
+      }
+    }
+  
+    .col-2 {
+      padding-right: var(--trust-col2-pr);
+      padding-left: var(--trust-col1-pr);
+  
+      .h5 {
+        margin: var(--trust-col2-h5-margin);
+      }
+    }
+  
+    .line {
+      width: 80%;
+      max-width: 500px;
+      background-color: rgba(0, 0, 0, 0.3);
+      height: 1px;
+      position: relative;
+      margin: var(--trust-line-margin);
+  
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 40%;
+        background-color: black;
+      }
+    }
+  }

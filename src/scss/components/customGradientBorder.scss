@@ -1,0 +1,70 @@
+.custom-gradient-border {
+  position: relative;
+  z-index: 10;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  &::after {
+    z-index: -1;
+    background-color: white;
+    inset: 0;
+  }
+
+  &::before {
+    inset: -1px;
+    z-index: -2;
+    background: linear-gradient(
+      to bottom right,
+      rgba(29, 24, 25, 0) 0%,
+      rgba(29, 24, 25, 1) 50%,
+      rgba(29, 24, 25, 0) 100%
+    );
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    opacity: 0.15;
+    transition: all 0.6s;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  &--no-hover {
+    @extend .custom-gradient-border;
+    &:hover {
+      &::before {
+        opacity: 0.15;
+      }
+    }
+  }
+
+  &--dark-alpha {
+    @extend .custom-gradient-border;
+
+    &::after {
+      background-color: #343030;
+    }
+
+    &::before {
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.35) 0%,
+        rgba(255, 255, 255, 0.75) 50%,
+        rgba(255, 255, 255, 0.35) 100%
+      );
+      opacity: 0.5;
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+}

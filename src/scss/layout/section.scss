@@ -1,0 +1,27 @@
+.section {
+  padding-block: $section-padding;
+
+  &--noPaddingBottom {
+    padding-bottom: 0
+  }
+
+  &--noPaddingTop {
+    padding-top: 0;
+  }
+
+  &--smallPaddingTop {
+    padding-top: $section-small-padding;
+  }
+
+  &--smallPaddingBottom {
+    padding-bottom: $section-small-padding;
+  }
+
+  &--largePaddingTop {
+    padding-top: $section-large-padding;
+  }
+
+  &--largePaddingBottom {
+    padding-bottom: $section-large-padding;
+  }
+}

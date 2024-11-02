@@ -1,0 +1,79 @@
+<h2 class="text-40px/1_2 mb-48px">Serwis - zgłoszenie</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16px md:gap-x-32px md:gap-y-24px">
+  <div>
+    [select* subject id:sf-subject first_as_label "Temat zgłoszenia" "Awaria" "Asysta / Uruchomienie"]
+    <label data-required for="sf-subject">Temat zgłoszenia</label>
+  </div>
+  <div>
+    [text* date id:sf-date placeholder "DD-MM-RRRR"]
+    <label data-required for="sf-date">Data awarii/planowanego uruchomienia</label>
+  </div>
+</div>
+
+<div class="flex items-center text-24px/1_2 mb-24px mt-48px">
+  <h3 class="flex-shrink-0 -mt-[0.1em] max-w-2/3 text-balance">Dane firmy zamawiającej</h3>
+  <div class="flex-grow-1 block self-start h-px w-full ms-24px mt-[0.5em] bg-neutral-dark"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16px md:gap-x-32px md:gap-y-24px">
+  <div>
+    [text* company-name id:sf-company-name]
+    <label data-required for="sf-company-name">Nazwa firmy</label>
+  </div>
+  <div>
+    [text* company-nip id:sf-company-nip]
+    <label data-required for="sf-company-nip">NIP</label>
+  </div>
+  <div>
+    [text* company-street id:sf-company-street]
+    <label data-required for="sf-company-street">Ulica</label>
+  </div>
+  <div>
+    [text* company-city id:sf-company-city]
+    <label data-required for="sf-company-city">Miejscowość</label>
+  </div>
+  <div>
+    [tel* company-phone id:sf-company-phone]
+    <label data-required for="sf-company-phone">Telefon</label>
+  </div>
+  <div>
+    [email* company-email id:sf-company-email]
+    <label data-required for="sf-company-email">E-mail</label>
+  </div>
+  <div>
+    [text* company-person id:sf-company-person]
+    <label data-required for="sf-company-person">Osoba zgłaszająca</label>
+  </div>
+</div>
+
+<div class="flex items-center text-24px/1_2 mb-24px mt-48px">
+  <h3 class="flex-shrink-0 -mt-[0.1em] max-w-2/3 text-balance">Dane urządzenia</h3>
+  <div class="flex-grow-1 block self-start h-px w-full ms-24px mt-[0.5em] bg-neutral-dark"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16px md:gap-x-32px md:gap-y-24px">
+  <div>
+    [text* model id:sf-model]
+    <label data-required for="sf-model">Model</label>
+  </div>
+  <div>
+    [text* serial id:sf-serial]
+    <label data-required for="sf-serial">Numer seryjny urządzenia</label>
+  </div>
+  <div class="md:col-span-2">
+    <div>
+      [textarea* description id:sf-description]
+      <label data-required for="sf-description">Opis awarii/zakres uruchomienia/zakres asysty</label>
+    </div>
+  </div>
+  <div class="md:col-span-2">
+    <div>
+      [textarea info id:sf-info]
+      <label for="sf-info">Lokalizacja i uwagi</label>
+    </div>
+  </div>
+</div>
+
+<button type="submit" class="mt-48px flex items-center w-full min-h-[62px] px-20px py-8px text-16px/1_25 lg:text-20px/1_25 font-medium text-neutral-white bg-neutral-red hover:bg-neutral-red/80 justify-center transition-colors">
+  <span>Wyślij zgłoszenie</span><span class="wpcf7-spinner"></span>
+</button>
+<p class="mt-8px text-16px/1_6 text-center text-neutral-gray">Czas reakcji serwisu: interwencja do 24h od otrzymania zgłoszenia.</p>

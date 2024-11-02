@@ -1,0 +1,49 @@
+.imageBox {
+  $root: &;
+  position: relative;
+  overflow: hidden;
+
+  // fit
+  &--cover,
+  &--contain {
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 75%;
+      visibility: hidden;
+    }
+
+    // ratio
+    &#{$root}--square:before {
+      padding-top: 100%;
+    }
+  }
+
+  &__img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    // fit
+    #{$root}--cover &,
+    #{$root}--contain & {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    #{$root}--cover & {
+      object-fit: cover;
+    }
+
+    #{$root}--contain & {
+      object-fit: contain;
+    }
+  }
+}

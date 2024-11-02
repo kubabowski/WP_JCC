@@ -1,0 +1,182 @@
+.select {
+  $root: &;
+  @apply
+    block
+    relative
+    w-full
+    overflow-hidden
+    rounded-4px
+  ;
+
+  &__select {
+    @apply
+      font-main
+      block
+      w-full
+      h-40px
+      px-16px
+      py-[7px]
+      text-16px/24px
+      text-field-text
+      bg-white
+      border
+      border-field-border
+      rounded-4px
+      shadow-none
+      pe-40px
+      appearance-none
+      transition-colors
+      hover:border-neutral-700
+    ;
+  }
+
+  &__icon {
+    @apply
+      block
+      absolute
+      end-16px
+      bottom-10px
+      text-20px/1
+      text-field-text
+      pointer-events-none
+      z-10
+    ;
+  }
+
+  &__line {
+    @apply
+      block
+      absolute
+      bottom-0
+      left-0
+      right-0
+      h-[2px]
+      bg-neutral-950
+      transition-transform
+      scale-x-0
+      pointer-events-none
+    ;
+
+    #{$root}__select:active ~ & {
+      @apply
+        scale-x-[.33]
+      ;
+    }
+    #{$root}__select:focus-visible ~ & {
+      @apply
+        scale-x-100
+      ;
+    }
+  }
+}
+
+// .select {
+//   $root: &;
+//   display: block;
+//   width: 100%;
+//   position: relative;
+
+//   &--inline {
+//     display: inline-block;
+//     width: auto;
+//   }
+
+//   &::after {
+//     @include icomoon('chevron-down');
+//     display: block;
+//     color: $c-black;
+//     position: absolute;
+//     bottom: 2rem;
+//     margin-bottom: -0.5rem;
+//     font-size: 0.8rem;
+//     line-height: 1;
+//     pointer-events: none;
+
+//     @include nortl {
+//       right: 1.5rem;
+//     }
+
+//     @include rtl {
+//       left: 1.5rem;
+//     }
+//   }
+
+//   &__select {
+//     display: block;
+//     width: 100%;
+//     height: 4rem;
+//     padding: 0.9rem 1.5rem;
+//     font-size: 1.2rem;
+//     line-height: 2rem;
+//     border-radius: 0.4rem;
+//     border: 1px solid $c-eee-adf;
+//     background-color: $c-white;
+//     color: $c-black;
+//     transition: border-color $tr;
+
+//     @include nortl {
+//       padding-right: 3.1rem;
+//     }
+
+//     @include rtl {
+//       padding-left: 3.1rem;
+//     }
+
+//     &:focus {
+//       border-color: $c-prim;
+//     }
+
+//     #{$root}.error &,
+//     #{$root}--error & {
+//       color: $c-error;
+//       border-color: $c-error;
+//     }
+//   }
+
+//   &__label {
+//     z-index: 1;
+//     display: block;
+//     position: absolute;
+//     top: 2rem;
+//     left: 1.5rem;
+//     right: auto;
+//     font-size: 1.2rem;
+//     line-height: 1.6rem;
+//     padding: 0 0.4rem;
+//     margin: 0 -0.4rem;
+//     margin-top: -0.8rem;
+//     // background-color: $c-white;
+//     background-image: linear-gradient(to right, $c-white, $c-white);
+//     background-size: 0 100%;
+//     background-repeat: no-repeat;
+//     pointer-events: none;
+//     transform-origin: 0 50%;
+//     transition: transform $tr, background-size $tr;
+
+//     @include rtl {
+//       left: auto;
+//       right: 1.5rem;
+//       transform-origin: 100% 50%;
+//       background-position: 100% 100%;
+//     }
+
+//     #{$root}--filled &,
+//     #{$root}__select:focus ~ & {
+//       background-size: 100% 100%;
+//       transform: translate(0.1rem, -2rem) scale(0.83);
+
+//       @include rtl {
+//         transform: translate(-0.1rem, -2rem) scale(0.83);
+//       }
+//     }
+
+//     #{$root}__select:focus ~ & {
+//       color: $c-prim;
+//     }
+
+//     #{$root}.error &,
+//     #{$root}--error & {
+//       color: $c-error;
+//     }
+//   }
+// }

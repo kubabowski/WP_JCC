@@ -1,0 +1,40 @@
+// font icons
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('./../../public/fonts/icomoon/fonts/icomoon.woff2') format('woff2'),
+    url('./../../public/fonts/icomoon/fonts/icomoon.woff') format('woff'),
+    url('./../../public/fonts/icomoon/fonts/icomoon.ttf') format('truetype'),
+    url('./../../public/fonts/icomoon/fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@each $icon, $content in $icons {
+  .icon-#{$icon}:before {
+    @include icomoon($icon);
+  }
+}
+
+// svg icons
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+
+  &--stroke {
+    fill: none;
+  }
+
+  &--fill {
+    stroke: none;
+  }
+
+  &--transparent {
+    fill: transparent;
+    stroke: transparent;
+  }
+}

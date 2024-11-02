@@ -1,0 +1,55 @@
+.swiper {
+  $root: &;
+  @apply
+    overflow-hidden
+  ;
+
+  &-wrapper {
+    @apply
+      flex
+    ;
+  }
+
+  &-slide {
+    @apply
+      flex-shrink-0
+      w-full
+    ;
+  }
+
+  &-custom-dots {
+    @apply
+      flex
+      invisible
+      items-center
+      justify-center
+    ;
+
+    .swiper-pagination-bullet {
+      @apply
+        visible
+        block
+        size-16px
+        rounded-8px
+        border
+        border-current
+        transition-colors
+        bg-transparent
+      ;
+
+      &.swiper-pagination-bullet-active {
+        @apply
+          bg-current
+        ;
+      }
+    }
+
+    &.swiper-pagination-clickable {
+      .swiper-pagination-bullet {
+        @apply
+          cursor-pointer
+        ;
+      }
+    }
+  }
+}

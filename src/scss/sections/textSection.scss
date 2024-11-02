@@ -1,0 +1,47 @@
+.textSection {
+  $root: &;
+  // overflow: hidden;
+  // background-color: $c-clear-skies-20;
+
+  // @include rwd('tablet') {
+  //   background-color: $c-clear-skies-30;
+  //   background-image: $g-gradients-sky;
+  // }
+
+  // &--transparent {
+  //   background-color: transparent;
+
+  //   @include rwd('tablet') {
+  //     background-color: transparent;
+  //     background-image: none;
+  //   }
+  // }
+
+  &__inner {
+    padding-block: $section-padding;
+
+    #{$root}--noPaddingTop & {
+      padding-top: 0;
+    }
+
+    #{$root}--noPaddingBottom & {
+      padding-bottom: 0
+    }
+
+    #{$root}--smallPaddingTop & {
+      padding-top: $section-small-padding;;
+    }
+
+    #{$root}--smallPaddingBottom & {
+      padding-bottom: $section-small-padding;;
+    }
+
+    #{$root}--largePaddingTop & {
+      padding-top: $section-large-padding;;
+    }
+
+    #{$root}--largePaddingBottom & {
+      padding-bottom: $section-large-padding;;
+    }
+  }
+}

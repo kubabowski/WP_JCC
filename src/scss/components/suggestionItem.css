@@ -1,0 +1,17 @@
+.suggestion-item {
+  position: relative;
+  padding: 21px 40px;
+  @apply text-neutral-gray hover:text-neutral-dark text-14px/1 transition-colors font-medium cursor-pointer;
+}
+.suggestion-item::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9703 14.2632C17.447 11.4233 17.3332 7.10931 14.6287 4.40489C11.8055 1.58164 7.2281 1.58164 4.40484 4.4049C1.58159 7.22815 1.58159 11.8055 4.40484 14.6288C7.10925 17.3332 11.4232 17.447 14.2632 14.9703L21.0592 21.7664L21.7663 21.0593L14.9703 14.2632Z' stroke-width='1' fill='none' stroke='%23777475'%3E%3C/path%3E%3C/svg%3E%0A");
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+  width: 24px;
+  height: 24px;
+}/*# sourceMappingURL=suggestionItem.css.map */

@@ -1,0 +1,472 @@
+.select {
+  $root: &;
+  display: block;
+  width: 100%;
+  position: relative;
+
+  &--inline {
+    display: inline-block;
+    width: auto;
+  }
+
+  &--errorSpace {
+    padding-bottom: 2.6rem;
+  }
+
+  &::after {
+    @include icomoon('chevron-down');
+    display: block;
+    color: currentColor;
+    position: absolute;
+    top: 2.2rem;
+    inset-inline-end: 1.2rem;
+    font-size: 1.2rem;
+    line-height: 1;
+    pointer-events: none;
+    transform: translateY(-50%);
+
+    @include rwd('laptop') {
+      font-size: fluidValue(12, 10);
+      top: fluidValue(22, 16);
+    }
+  }
+
+  &--active::after {
+    margin-top: -0.5rem;
+    transform: rotate(180deg);
+  }
+
+  &__value,
+  &__placeholder,
+  &__button,
+  &__search,
+  &__select {
+    display: block;
+    width: 100%;
+    height: 4.4rem;
+    padding: 1.2rem 1rem;
+    padding-inline-end: 3.2rem;
+    @include fontFamily('main');
+    font-size: 1.6rem;
+    line-height: 2rem;
+    border-bottom: 1px solid currentColor;
+    background-color: transparent;
+    color: currentColor;
+    transition: color $tr;
+
+    @include rwd('laptop') {
+      height: fluidValue(44, 36);
+      font-size: fluidValue(16, 12);
+      line-height: fluidValue(20, 16);
+      padding: fluidValue(12, 10) 1rem;
+    }
+
+    // #{$root}--focused &,
+    // &:focus {
+    //   border-color: $c-bbc;
+    // }
+
+    // &::placeholder {
+    //   color: rgba($c-black, 0.33);
+
+    //   #{$root}.error &,
+    //   #{$root}--error & {
+    //     color: $c-error;
+    //   }
+    // }
+
+    // #{$root}.error &,
+    // #{$root}--error & {
+    //   color: $c-error;
+    //   border-color: $c-error;
+    // }
+  }
+
+  &__input {
+    position: relative;
+
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+
+  &__value,
+  &__placeholder,
+  &__button,
+  &__search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: border-color $tr;
+
+    // #{$root}__input--error ~ & {
+    //   border-color: $c-error;
+    // }
+  }
+
+  &__value,
+  &__placeholder {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  &__value {
+    display: block;
+
+    #{$root}--placeholder & {
+      display: none;
+    }
+  }
+
+  &__placeholder {
+    display: none;
+
+    #{$root}--placeholder & {
+      display: block;
+    }
+  }
+
+  &__button {
+    opacity: 0;
+  }
+
+  &__search {
+    z-index: 1;
+    opacity: 0;
+    transition: opacity $tr, border-color $tr, border-radius $tr;
+
+    &::after {
+      z-index: 1;
+      @include icomoon("search");
+      display: block;
+      color: $c-text;
+      position: absolute;
+      top: 50%;
+      margin-top: -0.8rem;
+      font-size: 1.6rem;
+      line-height: 1;
+      pointer-events: none;
+      inset-inline-start: 1.5rem;;
+
+      @include rtl {
+        transform: scaleX(-1);
+      }
+    }
+
+    #{$root}--active & {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__searchInput {
+    z-index: 2;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    @include fontFamily('main');
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: $c-black;
+    padding: 0.9rem 3.2rem;
+    padding-inline-start: 4.4rem;
+  }
+
+  &__options {
+    z-index: $z-index-select-options;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $c-natural-white;
+    border-top: 0;
+    box-shadow: $drop-shadow;
+    transform-origin: 50% 0;
+    max-height: 22rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__option {
+    display: block;
+    width: 100%;
+    min-height: 4.4rem;
+    padding: 1.2rem 1rem;
+    @include fontFamily('main');
+    font-size: 1.6rem;
+    line-height: math.div(20, 16);
+    text-align: start;
+    transition: color $tr;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: $c-clear-skies-50;
+    transition: background-color $tr;
+
+    &--hidden {
+      display: none;
+    }
+
+    @media (hover: hover) {
+      &:not(&--disabled):hover {
+        background-color: $c-clear-skies-10;
+      }
+    }
+
+    &--focused {
+      background-color: $c-clear-skies-10;
+    }
+
+    &--selected {
+      color: $c-intense-turquoise;
+    }
+
+    &--disabled {
+      color: $c-rock;
+    }
+
+    #{$root}__options--multiple & {
+      position: relative;
+      padding-inline-start: 4rem;
+
+      &--selected {
+        color: $c-clear-skies-50;
+
+        &#{$root}__option--disabled {
+          color: $c-rock;
+        }
+      }
+
+      &--partial {
+        color: $c-clear-skies-50;
+      }
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    inset-inline-start: 1.2rem;;
+    transform: translateY(-50%);
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 1px solid $c-clear-skies-50;
+    background-color: $c-natural-white;
+    transition: background-color $tr, border-color $tr;
+    cursor: pointer;
+
+    &::before {
+      @include icomoon('plus');
+      font-size: 0.6rem;
+      line-height: 1;
+      display: block;
+      color: $c-natural-white;
+    }
+
+    #{$root}__option--selected & {
+      background-color: $c-clear-skies-50;
+      border-color: $c-clear-skies-50;
+
+      &:before {
+        color: $c-natural-white;
+      }
+    }
+
+    #{$root}__option--partial & {
+      border-color: $c-clear-skies-50;
+
+      &:before {
+        color: $c-clear-skies-50;
+      }
+    }
+
+    #{$root}__option--disabled & {
+      background-color: $c-natural-white;
+      border-color: $c-rock;
+
+      &:before {
+        color: $c-natural-white;
+      }
+    }
+
+    #{$root}__option--disabled#{$root}__option--selected & {
+      background-color: $c-rock;
+      border-color: $c-rock;
+    }
+
+    #{$root}__option--noResults & {
+      display: none;
+    }
+  }
+
+  &__label {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    inset-inline-start: 1.2rem;
+    inset-inline-end: auto;
+    top: 2.2rem;
+    font-size: 1.6rem;
+    line-height: math.div(20, 16);
+    padding: 0;
+    max-width: calc(100% - 2.4rem);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    pointer-events: none;
+    // color: $c-clear-skies-80;
+    background-color: transparent;
+    transition: color $tr, transform $tr;
+
+    @include nortl {
+      transform-origin: 0 50%;
+      transform: translateX(-0.1em) translateY(-1rem);
+    }
+    @include rtl {
+      transform-origin: 100% 50%;
+      transform: translateX(0.1em) translateY(-1rem);
+    }
+
+    @include rwd('laptop') {
+      top: fluidValue(22, 16);
+      font-size: fluidValue(16, 12);
+    }
+
+    // #{$root}--focused &,
+    // #{$root}__input:focus~& {
+    //   color: currentColor;
+    // }
+
+    #{$root}--filled &,
+    #{$root}--focused &,
+    #{$root}__button:focus~&,
+    #{$root}__search:focus~&,
+    #{$root}__select:focus~& {
+      @include nortl {
+        transform: translateX(-0.1em) translateY(-2.6rem) scale(0.64);
+      }
+      @include rtl {
+        transform: translateX(0.1em) translateY(-2.6rem) scale(0.64);
+      }
+
+      @include rwd('laptop') {
+        @include nortl {
+          transform: translateX(-0.1em) translateY(fluidValue(-26, -18)) scale(0.64);
+        }
+        @include rtl {
+          transform: translateX(0.1em) translateY(fluidValue(-26, -18)) scale(0.64);
+        }
+      }
+    }
+  }
+
+  &__error {
+    display: none;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: math.div(12, 12);
+    color: $c-clear-skies-50;
+    min-height: 1.6rem;
+    margin-top: 1rem;
+
+    #{$root}--errorSpace & {
+      margin-bottom: -2.6rem;
+    }
+
+    &::before {
+      @include icomoon('alert');
+      font-size: 1.6rem;
+      line-height: 1;
+      margin-inline-end: 1rem;
+      align-self: flex-start;
+    }
+
+    #{$root}.error &,
+    #{$root}__select.error~&,
+    #{$root}__select--error~&,
+    &--active {
+      display: flex !important;
+    }
+  }
+
+  // themes begin
+  &--default,
+  &--turquoise {
+    color: $c-intense-turquoise;
+
+    #{$root}__value,
+    #{$root}__placeholder,
+    #{$root}__button,
+    #{$root}__search,
+    #{$root}__select {
+      &::placeholder {
+        color: $c-clear-skies-80;
+      }
+    }
+
+    #{$root}__label {
+      color: $c-clear-skies-80;
+    }
+    #{$root}__button:focus~#{$root}__label,
+    #{$root}__search:focus~#{$root}__label,
+    #{$root}__select:focus~#{$root}__label {
+      color: currentColor;
+    }
+  }
+
+  &--skies {
+    color: $c-clear-skies-50;
+
+    #{$root}__value,
+    #{$root}__placeholder,
+    #{$root}__button,
+    #{$root}__search,
+    #{$root}__select {
+      &::placeholder {
+        color: $c-clear-skies-40;
+      }
+    }
+
+    #{$root}__label {
+      color: $c-clear-skies-30;
+    }
+    #{$root}__button:focus~#{$root}__label,
+    #{$root}__search:focus~#{$root}__label,
+    #{$root}__select:focus~#{$root}__label {
+      color: $c-clear-skies-80;
+    }
+  }
+
+
+  [data-dark] &,
+  &--white {
+    color: $c-natural-white;
+
+    #{$root}__value,
+    #{$root}__placeholder,
+    #{$root}__button,
+    #{$root}__search,
+    #{$root}__select {
+      &::placeholder {
+        color: $c-clear-skies-30;
+      }
+    }
+
+    #{$root}__label {
+      color: $c-clear-skies-30;
+    }
+    #{$root}__button:focus~#{$root}__label,
+    #{$root}__search:focus~#{$root}__label,
+    #{$root}__select:focus~#{$root}__label {
+      color: currentColor;
+    }
+  }
+  // themes end
+}

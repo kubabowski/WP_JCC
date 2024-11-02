@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_66e2ed5a36da0",
+    "title": "Partnerzy (opcje)",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Partnerzy (opcje)",
+    "menu_slug": "partners_options",
+    "parent_slug": "options-general.php",
+    "advanced_configuration": 0,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": false,
+    "description": "",
+    "menu_icon": [],
+    "update_button": "Aktualizuj",
+    "updated_message": "Ustawienia zostały zaktualizowane",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1726147958
+}

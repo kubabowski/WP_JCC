@@ -1,0 +1,8 @@
+*.php
+node_modules
+vendors
+functions
+includes
+acf-json
+public/dist
+webpack.mix.js

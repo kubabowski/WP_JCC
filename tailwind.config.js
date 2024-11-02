@@ -1,0 +1,220 @@
+/* eslint-disable no-magic-numbers */
+// eslint-disable-next-line import/no-extraneous-dependencies
+// const defaultTheme = require('tailwindcss/defaultTheme');
+
+function pxToRem(px, base = 16) {
+  return `${(px / base)}rem`;
+}
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  corePlugins: {
+    // preflight: false,
+    container: false,
+  },
+  content: [
+    // './src/**/*.{html,js}'
+    // './*.php', // cause infinity loop issue https://stackoverflow.com/questions/71160737/tailwind-laravelmix-infinity-loop-on-watch
+    './header.php',
+    './footer.php',
+    './index.php',
+    './front-page.php',
+    './single-knowledge.php',
+    './single-product.php',
+    './archive-knowledge.php',
+    './single-product.php',
+    './single-service.php',
+    './search.php',
+    './404.php',
+    './page-svg-icons.php',
+    './templates/**/*.php',
+    './includes/components/**/*.php',
+    './includes/layout/*.php',
+    './includes/sections/*.php',
+    './cf7-templates/*.html',
+  ],
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: '#000000',
+      white: '#FFFFFF',
+      default: '#1D1819',
+      primary: {
+        DEFAULT: '#EF3E2C',
+      },
+      neutral: {
+        DEFAULT: '#1D1819',
+        dark: '#1D1819',
+        gray: '#777475',
+        white: '#FFFFFF',
+        red: '#EF3E2C',
+      },
+      border: {
+        menu: '#EDECED',
+        gray: '#D2D1D1',
+      },
+      link: {
+        DEFAULT: '#1C3AA5',
+        blue: '#1C3AA5',
+      },
+      text: '#161616',
+      bg: '#FFFFFF',
+    },
+    screens: {
+      // cftn
+      // 'phone'        : '360px',
+      // 'large-phone'  : '480px',
+      // 'small-tablet' : '600px',
+      // 'tablet'       : '768px',
+      // 'large-tablet' : '1024px',
+      // 'laptop'       : '1280px',
+      // 'large-laptop' : '1366px',
+      // 'ultra'        : '1600px',
+      // tailwind default
+      // sm:     '640px',
+      // md:     '768px',
+      // lg:     '1024px',
+      // xl:     '1280px',
+      // '2xl':  '1536px',
+      // ...defaultTheme.screens,
+      '2xs':  '360px',
+      xs:     '480px',
+      sm:     '640px',
+      md:     '768px',
+      lg:     '1024px',
+      xl:     '1280px',
+      '1xl':  '1366px',
+      '2xl':  '1536px',
+    },
+    spacing: {
+      auto: 'auto',
+      0: '0',
+      px: '1px',
+      '1/5': '20%',
+      '1/4': '25%',
+      '1/3': '33.3333%',
+      '1/2': '50%',
+      '2/3': '66.6666%',
+      '5/4': '125%',
+      // '3/2': '150%',
+      // '2/1': '200%',
+      full: '100%',
+      video: '56.25%',
+      '4px': pxToRem(4),
+      '6px': pxToRem(6),
+      '8px': pxToRem(8),
+      '10px': pxToRem(10),
+      '12px': pxToRem(12),
+      '16px': pxToRem(16),
+      '20px': pxToRem(20),
+      '24px': pxToRem(24),
+      '32px': pxToRem(32),
+      '36px': pxToRem(36),
+      '40px': pxToRem(40),
+      // '44px': pxToRem(44),
+      '48px': pxToRem(48),
+      // '52px': pxToRem(52),
+      '56px': pxToRem(56),
+      '58px': pxToRem(58),
+      '64px': pxToRem(64),
+      // '80px': pxToRem(80),
+      '72px': pxToRem(72),
+      '96px': pxToRem(96),
+      '112px': pxToRem(112),
+      '128px': pxToRem(128),
+      '100vh': 'var(--100vh, 100vh)',
+      '100vw': 'var(--100vw, 100vw)',
+      // 'header-height': pxToRem(116),
+      // '100vh-header-height': `calc(var(--100vh, 100vh) - ${pxToRem(116)})`,
+      'header-height': `var(--header-height, ${pxToRem(116)})`,
+      '100vh-header-height': `calc(var(--100vh, 100vh) - var(--header-height, ${pxToRem(116)}))`,
+      'wrapper-space': 'var(--wrapper-space, 0)',
+      'wrapper-space-wide': 'var(--wrapper-space-wide, 0)',
+    },
+    borderWidth: {
+      DEFAULT: '1px',
+      0: '0',
+    },
+    borderRadius: {
+      0: '0',
+      '1/2': '50%',
+      // '4px': pxToRem(4),
+      // '8px': pxToRem(8),
+      // '16px': pxToRem(16),
+      // sm: pxToRem(4),
+      // md: pxToRem(8),
+      // lg: pxToRem(16),
+      full: '1000px', // hack using large value
+    },
+    boxShadow: {
+      none: 'none',
+      // focus: [
+      //   '0 0 0 2px #FFFFFF',
+      //   '0 0 0 4px #000000',
+      // ].join(', '),
+    },
+    fontFamily: {
+      main: '\'GeneralSans\', Tahoma, Verdana, sans-serif',
+    },
+    fontWeight: {
+      // thin: '100',
+      // extralight: '200',
+      // light: '300',
+      normal: '400',
+      regular: '400',
+      medium: '500',
+      // semibold: '600',
+      bold: '700',
+    },
+    fontSize: {
+      // '12px': pxToRem(12),
+      '14px': pxToRem(14),
+      '16px': pxToRem(16),
+      '18px': pxToRem(18),
+      '20px': pxToRem(20),
+      '24px': pxToRem(24),
+      // '28px': pxToRem(28),
+      '32px': pxToRem(32),
+      // '30px': pxToRem(30),
+      '36px': pxToRem(36),
+      '40px': pxToRem(40),
+      '48px': pxToRem(48),
+      '72px': pxToRem(72),
+    },
+    lineHeight: {
+      1: '1',
+      '1_2': '1.2', // 72px/86_4px 24px/28_8px 16px/19_2px
+      '1_25': '1.25', // 16px/20px
+      // '1_33': '1.33',
+      '1_4': '1.4', // 18px/25.2px
+      '1_5': '1.5', // 16px/24px
+      '1_6': '1.6', // 16px/25.6px 18px/28_8px 20px/32px
+      // '19_2px': pxToRem(19.2),
+      // '25_6px': pxToRem(25.6),
+      // '28_8px': pxToRem(28.8),
+      // '86_4px': pxToRem(86.4),
+      // '18px': pxToRem(18),
+      // '20px': pxToRem(20),
+      // '24px': pxToRem(24),
+      // '28px': pxToRem(28),
+      // '30px': pxToRem(30),
+      // '32px': pxToRem(32),
+      // '38px': pxToRem(38),
+      // '44px': pxToRem(44),
+      // '48px': pxToRem(48),
+      // '60px': pxToRem(60),
+      // '90px': pxToRem(90),
+    },
+    extend: {
+      transitionProperty: {
+        visibility: 'visibility, opacity',
+      },
+    },
+  },
+  // plugins: [],
+  safelist: [
+    // 'min-[1366px]:whitespace-normal',
+    'overflow-auto', // for ThemeClasses\Controller\Product::parseWysiwyg
+  ],
+};

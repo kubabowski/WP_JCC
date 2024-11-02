@@ -1,0 +1,243 @@
+.wpcf7 {
+  form.wpcf7-form {
+    // p {
+    //   @apply
+    //     flex
+    //     flex-col
+    //     lg:flex-row
+    //   ;
+    // }
+
+    span.wpcf7-form-control-wrap {
+      @apply block;
+    }
+
+    button[type="submit"] .wpcf7-spinner {
+      @apply
+        left-16px
+        !m-0
+        !size-24px
+        !-me-24px
+      ;
+    }
+
+    [data-form="newsletter"] & {
+      input {
+        @apply
+          block
+          h-[62px]
+          w-full
+          px-20px
+          bg-neutral-white
+          border-b
+          border-border-gray
+          text-20px/1_2
+          focus:outline-none
+          outline-none
+        ;
+      }
+    }
+
+    .wysiwyg & {
+      input {
+        @apply
+          block
+          h-48px
+          w-full
+          p-8px
+          bg-neutral/5
+          border-b
+          border-neutral-dark/40
+        ;
+      }
+
+      textarea {
+        @apply
+          block
+          min-h-48px
+          h-[9rem]
+          w-full
+          p-8px
+          bg-neutral/5
+          border-b
+          border-neutral-dark/40
+          resize-y
+        ;
+      }
+
+      select {
+        @apply
+          block
+          h-48px
+          w-full
+          p-8px
+          bg-neutral/5
+          border-b
+          border-neutral-dark/40
+        ;
+      }
+
+      label {
+        @apply
+          block
+          text-14px/1_2
+          mt-8px
+        ;
+
+        &[data-required] {
+          &::after {
+            content: '*';
+            @apply
+              text-neutral-red
+            ;
+          }
+        }
+      }
+
+      .wpcf7-checkbox,
+      .wpcf7-radio {
+        @apply
+          flex
+          flex-col
+          items-start
+          gap-8px
+        ;
+
+        .wpcf7-list-item {
+          @apply
+            block
+            !m-0
+          ;
+
+          & > label {
+            @apply
+              relative
+              flex
+              gap-12px
+              min-h-24px
+            ;
+
+            & > input {
+              @apply
+                block
+                size-24px
+                cursor-pointer
+                opacity-0
+                absolute
+                top-0
+                left-0
+              ;
+            }
+
+            & > input ~ .wpcf7-list-item-label {
+              @apply
+                ps-36px
+                self-center
+                text-16px/1_6
+              ;
+
+              &::before,
+              &::after {
+                content: '';
+                @apply
+                  block
+                  absolute
+                  top-0
+                  left-0
+                ;
+              }
+
+              &::before {
+                content: '';
+                @apply
+                  size-24px
+                  border
+                  border-neutral-dark/40
+                  bg-neutral-dark/5
+                  cursor-pointer
+                ;
+              }
+            }
+
+            & > input:checked ~ .wpcf7-list-item-label {
+              &::after {
+                @apply
+                  opacity-100
+                ;
+              }
+            }
+          }
+        }
+      }
+
+      .wpcf7-checkbox {
+        .wpcf7-list-item {
+          & > label {
+            & > input ~ .wpcf7-list-item-label {
+              &::after {
+                content: '';
+                @apply
+                  size-16px
+                  m-4px
+                  bg-neutral-red
+                  opacity-0
+                  pointer-events-none
+                ;
+              }
+            }
+          }
+        }
+      }
+
+      .wpcf7-radio {
+        .wpcf7-list-item {
+          & > label {
+            & > input ~ .wpcf7-list-item-label {
+              &::before {
+                @apply
+                  rounded-1/2
+                ;
+              }
+
+              &::after {
+                content: '';
+                @apply
+                  size-16px
+                  m-4px
+                  rounded-1/2
+                  bg-neutral-red
+                  opacity-0
+                  pointer-events-none
+                ;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .wpcf7-not-valid-tip {
+      @apply
+        block
+        text-14px/1_2
+        mt-8px
+      ;
+    }
+
+    .wpcf7-response-output {
+      @apply
+        block
+        !border-none
+        !p-0
+        !m-0
+        !mt-12px
+      ;
+
+      .wysiwyg & {
+        @apply
+          text-center
+        ;
+      }
+    }
+  }
+}

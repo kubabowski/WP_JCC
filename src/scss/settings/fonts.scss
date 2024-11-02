@@ -1,0 +1,62 @@
+$fw-thin: 100;
+$fw-extra-light: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+$fw-black: 900;
+
+$fws-general-sans: (
+  // (
+  //   'name'   : 'Thin',
+  //   'weight' : $fw-thin,
+  //   'style'  : 'normal'
+  // ),
+  // (
+  //   'name'   : 'ExtraLight',
+  //   'weight' : $fw-extra-light,
+  //   'style'  : 'normal'
+  // ),
+  // (
+  //   'name'   : 'Light',
+  //   'weight' : $fw-light,
+  //   'style'  : 'normal'
+  // ),
+  (
+    'name'   : 'LightItalic',
+    'weight' : $fw-light,
+    'style'  : 'italic'
+  ),
+  (
+    'name'   : 'Regular',
+    'weight' : $fw-regular,
+    'style'  : 'normal'
+  ),
+  (
+    'name'   : 'Medium',
+    'weight' : $fw-medium,
+    'style'  : 'normal'
+  ),
+  // (
+  //   'name'   : 'SemiBold',
+  //   'weight' : $fw-semi-bold,
+  //   'style'  : 'normal'
+  // ),
+  (
+    'name'   : 'Bold',
+    'weight' : $fw-bold,
+    'style'  : 'normal'
+  ),
+);
+
+// https://www.w3schools.com/css/css_font_fallbacks.asp
+// serif: "Times New Roman", Times, serif
+// sans: Tahoma, Verdana, sans-serif
+
+$f-main: 'GeneralSans', Tahoma, Verdana, sans-serif;
+$f-main-ar: 'GeneralSans', Tahoma, Verdana, sans-serif;
+
+$f-sec: 'GeneralSans', Tahoma, Verdana, sans-serif;
+$f-sec-ar: 'GeneralSans', Tahoma, Verdana, sans-serif;

@@ -1,0 +1,70 @@
+<div class="mb-40px">
+  <h2 class="text-18px/1_6 font-medium ">Zgłoszenie na szkolenie: <span class="name-event"></span></h2>
+  <p class="desc-event"></p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16px md:gap-x-32px md:gap-y-24px">
+
+  <div>
+    [text* company-name id:sf-company-name]
+    <label data-required for="sf-company-name">Nazwa firmy</label>
+  </div>
+  <div class="[&_.wpcf7-radio]:flex-row">
+    [radio company-registered use_label_element id:sf-company-registered "TAK" "NIE"]
+    <label data-required for="sf-company-registered">Firma jest zarejestrowanym klientem Mitsubishi Electric</label>
+  </div>
+  <div>
+    [text* company-street id:sf-company-street]
+    <label data-required for="sf-company-street">Ulica</label>
+  </div>
+  <div>
+    [text* company-city id:sf-company-city]
+    <label data-required for="sf-company-city">Miejscowość</label>
+  </div>
+  <div>
+    [tel* company-phone id:sf-company-phone]
+    <label data-required for="sf-company-phone">Telefon</label>
+  </div>
+  <div>
+    [email* company-email id:sf-company-email]
+    <label data-required for="sf-company-email">E-mail</label>
+  </div>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16px md:gap-x-32px md:gap-y-24px mt-48px">
+  <div>
+    [text one-company-person id:sf-one-company-person]
+    <label for="sf-company-person">1. Uczestnik</label>
+  </div>
+  <div>
+    [text one-company-person-id id:sf-one-company-person-id]
+    <label for="sf-one-company-person">1. Uczestnik - numer certyfikatu f-gazowego</label>
+  </div>
+  
+  <div>
+    [text two-company-person id:sf-two-company-person]
+    <label for="sf-company-person">2. Uczestnik</label>
+  </div>
+  <div>
+    [text two-company-person-id id:sf-two-company-person-id]
+    <label for="sf-two-company-person">2. Uczestnik - numer certyfikatu f-gazowego</label>
+  </div>
+
+  <div>
+    [text three-company-person id:sf-three-company-person]
+    <label for="sf-company-person">3. Uczestnik</label>
+  </div>
+  <div>
+    [text three-company-person-id id:sf-three-company-person-id]
+    <label for="sf-three-company-person">3. Uczestnik - numer certyfikatu f-gazowego</label>
+  </div>
+
+</div>
+
+  [hidden subject]
+  [hidden date]
+
+<button type="submit" class="mt-48px flex items-center w-full min-h-[62px] px-20px py-8px text-16px/1_25 lg:text-20px/1_25 font-medium text-neutral-white bg-neutral-red hover:bg-neutral-red/80 justify-center transition-colors">
+  <span>Wyślij zgłoszenie</span><span class="wpcf7-spinner"></span>
+</button>

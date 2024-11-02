@@ -1,0 +1,6 @@
+$size-def-base: $unit-size-base;
+// $size-def-precize: 100000;
+
+@function size($value, $base:$size-def-base) {
+  @return #{($value / $base)}rem;
+}

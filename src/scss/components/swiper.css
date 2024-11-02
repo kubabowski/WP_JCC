@@ -1,0 +1,32 @@
+.swiper {
+  @apply overflow-hidden;
+}
+.swiper-wrapper {
+  @apply flex;
+}
+.swiper-slide {
+  @apply flex-shrink-0
+      w-full;
+}
+.swiper-custom-dots {
+  @apply flex
+      invisible
+      items-center
+      justify-center;
+}
+.swiper-custom-dots .swiper-pagination-bullet {
+  @apply visible
+        block
+        size-16px
+        rounded-8px
+        border
+        border-current
+        transition-colors
+        bg-transparent;
+}
+.swiper-custom-dots .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-current;
+}
+.swiper-custom-dots.swiper-pagination-clickable .swiper-pagination-bullet {
+  @apply cursor-pointer;
+}/*# sourceMappingURL=swiper.css.map */

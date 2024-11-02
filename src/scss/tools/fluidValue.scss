@@ -1,0 +1,37 @@
+// $fluid-def-base: $rwd-laptop; // 1280
+// // $fluid-def-min: $rwd-large-phone; // 480
+// $fluid-def-min: $rwd-tablet; // 768
+$fluid-def-base: $rwd-xl; // 1280
+// $fluid-def-min: $rwd-xs; // 480
+$fluid-def-min: $rwd-md; // 768
+$fluid-def-precize: 100000;
+
+@function limitPrecize($value, $precize:$fluid-def-precize) {
+  $tmp-value: floor($value * $precize);
+	@if($tmp-value % 2 != 0) {
+    $tmp-pixel: 1;
+    @if($tmp-value < 0) {
+      $tmp-pixel: -1;
+    }
+		@return math.div(($tmp-value - $tmp-pixel), $precize);
+	}
+	@return math.div($tmp-value, $precize);
+}
+
+// @function fluidValue($value) {
+//   @return #{limitPrecize(math.div($value, $fluid-def-base) * 100)}vw;
+// }
+
+@function fluidValue($value, $min-value:null, $min-base:$fluid-def-min, $base:$fluid-def-base) {
+  @if($min-value == null) {
+    @return #{limitPrecize(math.div($value, $base) * 100)}vw;
+  }
+
+  $diff-value: $value - $min-value;
+  $diff-base: $base - $min-base;
+
+  $alpha: limitPrecize(math.div($diff-value, $diff-base));
+  $offset: $min-value - ($min-base * $alpha);
+
+  @return calc(#{$offset}px + #{($alpha * 100)}vw);
+}

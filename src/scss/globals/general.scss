@@ -1,0 +1,421 @@
+html,
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: "aeonik", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "aeonik", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.color-000030 {
+  color: #000030 !important;
+}
+
+.color-101021 {
+  color: #101021 !important;
+}
+
+.color-blue {
+  color: var(--color-blue) !important;
+}
+
+.display-1 {
+  font-size: var(--display1-font-size);
+  line-height: var(--display1-line-height);
+  margin: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.h1 {
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+}
+
+.h2 {
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+}
+
+.h3 {
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
+}
+
+.h4 {
+  font-size: var(--h4-font-size);
+  line-height: var(--h4-line-height);
+}
+
+.h5 {
+  font-size: var(--h5-font-size);
+  line-height: var(--h5-line-height);
+}
+
+.h6 {
+  font-size: var(--h6-font-size);
+  line-height: var(--h6-line-height);
+}
+
+
+.container {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  // max-width: 1306px;
+  max-width: var(--container-width);
+  margin: auto;
+  width: 100%;
+}
+
+.container-lg {
+  padding-left: var(--container-padding-lg);
+  padding-right: var(--container-padding-lg);
+}
+
+.link-btn {
+  font-size: var(--link-font-size);
+  line-height: var(--link-line-height);
+  color: var(--color-blue);
+  text-decoration: unset;
+  position: relative;
+  display: inline-block;
+  padding-right: 24px;
+  margin: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 1px;
+    background-color: var(--color-blue);
+    font-weight: 500;
+  }
+
+  &::after {
+    content: url("../assets/icons/link-arrow.svg");
+    display: block;
+    position: absolute;
+    right: 0;
+    padding: 0 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: ease 0.3s all;
+  }
+
+  &:hover {
+    &::after {
+      padding: 0;
+    }
+  }
+}
+
+@mixin link-underline($color) {
+  color: $color;
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    background-color: $color;
+    transition: 0.4s ease all;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 100%;
+    bottom: -2px;
+    height: 1px;
+    background-color: $color;
+    transition: 0.4s ease all;
+    transition-delay: 0.2s;
+  }
+
+  &:hover {
+    &::before {
+      left: 100%;
+    }
+  
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+.link-white {
+  @include link-underline(white);
+
+  &::after, &::before {
+    bottom: 0;
+  }
+}
+
+.link-blue {
+  @include link-underline(var(--color-blue));
+}
+
+.btn {
+  padding: var(--btn-padding);
+  display: block;
+  font-size: var(--btn-font-size);
+  line-height: var(--btn-line-height);
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-lg {
+  padding: 16px 24px;
+  font-size: var(--btn-lg-font-size);
+  line-height: var(--btn-lg-line-height);
+}
+
+.btn-blue {
+  background-color: var(--color-blue);
+  color: white;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background-color: rgb(26, 52, 159);
+  }
+}
+
+.btn-white {
+  background-color: white;
+  color: #334eb9;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background-color: rgb(156, 176, 255);
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.align-start {
+  display: flex;
+  align-items: start;
+}
+
+.align-bottom {
+  display: flex;
+  align-items: end;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.items-end {
+  display: flex;
+  align-items: end;
+}
+
+.items-center {
+  display: flex;
+  align-items: center;
+}
+
+.items-start {
+  display: flex;
+  align-items: start;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-next {
+  position: relative;
+  width: 50px;
+  height: 44px;
+  margin-top: unset;
+
+  &:after {
+    content: url("../assets/icons/swiper-next.svg");
+  }
+}
+
+.swiper-button-prev {
+  position: relative;
+  width: 50px;
+  height: 44px;
+  margin-top: unset;
+
+  &:after {
+    content: url("../assets/icons/swiper-prev.svg");
+  }
+}
+
+#pagination-controls ul{
+  display: flex;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  top: unset;
+  left: unset;
+  right: unset;
+  bottom: unset;
+  margin-right: 2px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.breadcrumps {
+  .breadcrump-arrow {
+    margin-left: 14px;
+    margin-right: 14px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.filter-arrow {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+
+
+@mixin traingle-after($color: white, $width: 100px) {
+  content: "";
+  position: absolute;
+  left: 95%;
+  top: 90%;
+  bottom: -20px;
+  width: $width;
+  right: 0;
+  background-color: $color;
+  transform: skew(-45deg);
+}
+
+@mixin hero-2-setup {
+  // padding-top: 17vh;
+  padding-top: 151px;
+  width: 100%;
+
+  .breadcrumps {
+    a {
+      color: white;
+    }
+  }
+}
+
+@mixin hero-2-bg {
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+input, textarea, select {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  padding-inline: unset;
+  padding-block: unset;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+select {
+  appearance: auto;
+}
+
+button {
+  border: 0;
+  box-shadow: unset;
+}
+

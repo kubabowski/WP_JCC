@@ -1,0 +1,13 @@
+$tr    : .2s;
+$trM   : .4s;
+$trL   : .6s;
+$trXL  : .8s;
+$trXXL : 1s;
+
+$easeInCubic: cubic-bezier(0.32, 0, 0.67, 0);
+$easeOutCubic: cubic-bezier(0.33, 1, 0.68, 1);
+$easeInOutCubic: cubic-bezier(0.65, 0, 0.35, 1);
+// more https://easings.net/
+
+// custom
+$easeInBack: cubic-bezier(0.5, 0, 0.4, 1.3);

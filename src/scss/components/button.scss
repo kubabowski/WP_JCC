@@ -1,0 +1,85 @@
+.button {
+  $root: &;
+  @apply
+    inline-flex
+    items-center
+    justify-center
+    gap-4px
+    rounded-4px
+    border
+    border-transparent
+    min-h-32px
+    py-4px
+    px-12px
+    font-medium
+    text-14px/20px
+    transition-colors
+    focus-visible:shadow-focus-inner
+  ;
+
+  &--onlyIcon {
+    @apply
+      size-32px
+      p-0
+    ;
+  }
+
+  .icon {
+    @apply
+      flex-shrink-0
+      text-20px/1
+    ;
+  }
+
+  &--small {
+    @apply
+      min-h-24px
+      px-8px
+      text-12px/18px
+    ;
+
+    &#{$root}--onlyIcon {
+      @apply
+        size-24px
+        p-0
+      ;
+    }
+
+    .icon {
+      @apply
+        text-16px/1
+      ;
+    }
+  }
+
+  &--large {
+    @apply
+      min-h-40px
+      px-16px
+      text-16px/24px
+    ;
+
+    &#{$root}--onlyIcon {
+      @apply
+        size-40px
+        p-0
+      ;
+    }
+
+    .icon {
+      @apply
+        text-24px/1
+      ;
+    }
+  }
+
+  &--block {
+    @apply
+      flex
+    ;
+  }
+
+  // [data-dark] & {
+
+  // }
+}
