@@ -1,11 +1,13 @@
 import Swiper, { Pagination, Navigation } from 'swiper';
-import Entities from './shared/Entities'; 
+import Entities from './shared/Entities';
 
 class ServicesSwiperEntity {
   constructor(rootEl) {
-    if (!this.setVars(rootEl)) return;
+    console.log("before seVars");
+    if (!this.setVars(rootEl)) return; 
+    console.log("after seVars");
 
-    this.initSwipers();
+    this.initSwipers(); 
   }
 
   setVars(rootEl) {
@@ -18,17 +20,16 @@ class ServicesSwiperEntity {
     this.mainSliderEl = this.rootEl.querySelector('#services-swiper');
     if (!this.mainSliderEl) return false;
 
-    // this.paginationEl = this.rootEl.querySelector('#services-pagination');
-    // this.nextButtonEl = this.rootEl.querySelector('#services-next');
-    // this.prevButtonEl = this.rootEl.querySelector('#services-prev');
+    console.log(this.mainSliderEl); 
+    console.log(this.thumbsSliderEl); 
 
-    return true;
+    return true; 
   }
 
   initSwipers() {
     // Initialize thumbs swiper
     const thumbsServicesSwiper = new Swiper(this.thumbsSliderEl, {
-      loop: true,
+      loop: false,
       spaceBetween: 2,
       slidesPerView: 3,
       freeMode: true,
@@ -41,33 +42,28 @@ class ServicesSwiperEntity {
       effect: 'fade',
       allowTouchMove: false,
       centeredSlides: true,
-    //   pagination: {
-    //     el: this.paginationEl,
-    //     clickable: true,
-    //   },
-    //   navigation: {
-    //     nextEl: this.nextButtonEl,
-    //     prevEl: this.prevButtonEl,
-    //   },
       thumbs: {
-        swiper: thumbsServicesSwiper,
+        swiper: thumbsServicesSwiper, 
       },
     });
   }
 }
 
 export default class ServicesSwiper {
-    constructor() {
-        console.log('here');
+  constructor() {
 
-      this.entities = new Entities(
-        'ServicesSwiper',               // Name for the entity
-        '.services-swiper',             // Valid CSS selector for the elements you want to manage
-        ServicesSwiper.initSingle,       // Creator function
-      );
-    }
-  
-    static initSingle(element) {
-      return new ServicesSwiperEntity(element);
-    }
+    this.entities = new Entities(
+      'ServicesSwiper',              
+      '#homeServices',            
+      ServicesSwiper.initSingle,       
+    );
   }
+
+  static initSingle(element) {
+    return new ServicesSwiperEntity(element); 
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new ServicesSwiper();
+});

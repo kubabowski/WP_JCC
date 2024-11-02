@@ -58,7 +58,7 @@ foreach ($services as $service) {
 ?>
 
 
-<div class="services">
+<div id="homeServices" class="services">
     <div class="container">
         <h3 class="h5 fw-900 fs-20 lh-32 color-000030"><?= $props['title'] ?></h3>
         <h3 class="h2 header fw-400 fs-36 lh-44 color-000030"><?= $props['header'] ?></h3>
