@@ -8,7 +8,6 @@ class TestEntity {
     setVars(rootEl) {
       this.rootEl = rootEl;
       if (!this.rootEl) {
-        console.error('Invalid root element provided to TestEntity.'); 
         return false;
       }
   

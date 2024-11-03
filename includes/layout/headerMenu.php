@@ -5,8 +5,8 @@
   if (isset($props['class'])) $rootClass .= ' ' . $props['class'];
   if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];
 ?>
-<nav class="<?= $rootClass ?>"<?= $rootAttr ?>>
-  <ul class="flex gap-8px" data-submenu-parent-items>
+
+  <ul>
     <?php foreach ($props['items'] as $item): ?>
     <?php
       $hasChildren = count($item['children']) > 0;
@@ -15,8 +15,8 @@
 
       $itemLinkClass = ' ' . cx([
         $item['active']
-          ? 'text-neutral-dark font-medium bg-neutral-dark/5'
-          : 'text-neutral-dark/70 hover:text-neutral-dark/100 transition-colors',
+          ? 'fw-500 fs-16 lh-24'
+          : 'fw-500 fs-16 lh-24',
       ]);
 
       $itemLinkAttr = '';
@@ -28,7 +28,7 @@
       <a
         href="<?= $item['url'] ?>"
         target="<?= $item['target'] ?>"
-        class="peer p-8px flex items-center min-h-58px<?= $itemLinkClass ?>"
+        class="fw-500 fs-16 lh-24"
         <?= $itemLinkAttr ?>
       >
         <span class="text-16px/1_5"><?= $item['name'] ?></span>
@@ -38,21 +38,14 @@
       </a>
       <?php if ($hasChildren): ?>
       <ul
-        class="<?= cx([
-          'absolute top-full left-0 p-8px -mx-8px',
-          'bg-neutral-white border border-neutral-dark/10',
-          'invisible opaticy-0',
-          'hover:visible hover:opaticy-100',
-          'peer-hover:visible peer-hover:opaticy-100',
-          'transition-visibility',
-        ]) ?>"
+        class="<?= cx(['fw-500 fs-16 lh-24 dropdown']) ?>"
       >
         <?php foreach ($item['children'] as $subitem): ?>
         <?php
           $subitemLinkClass = ' ' . cx([
             $subitem['active']
-              ? 'text-neutral-dark font-medium bg-neutral-dark/5'
-              : 'text-neutral-dark/70 hover:text-neutral-dark/100 transition-colors',
+              ? 'fw-500 fs-16 lh-24 active'
+              : 'fw-500 fs-16 lh-24',
           ]);
         ?>
         <li>
@@ -70,4 +63,4 @@
     </li>
     <?php endforeach; ?>
   </ul>
-</nav>
+

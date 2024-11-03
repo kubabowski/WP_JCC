@@ -4,11 +4,13 @@ import MobileMenu from './MobileMenu';
 // import BasicSlider from './BasicSlider';
 import HomeServicesSwiper from './HomeServicesSwiper';
 import Test from './shared/test';
+import HeaderScroll from './shared/HeaderScroll';
 
 export default class Core {
   constructor() {
     new LiteEvents();
     new MobileMenu(); 
+    new HeaderScroll(); 
     // new BasicSlider();
 
     new Test();

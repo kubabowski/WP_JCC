@@ -1,5 +1,7 @@
-import Swiper, { Pagination, Navigation } from 'swiper';
+import Swiper, { Pagination, Navigation, Thumbs, EffectFade  } from 'swiper';
 import Entities from './shared/Entities';
+
+Swiper.use([Pagination, Navigation, Thumbs, EffectFade]);
 
 class ServicesSwiperEntity {
   constructor(rootEl) {
@@ -38,7 +40,7 @@ class ServicesSwiperEntity {
 
     // Initialize main swiper
     this.mainServicesSwiper = new Swiper(this.mainSliderEl, {
-      loop: true,
+      loop: false,
       effect: 'fade',
       allowTouchMove: false,
       centeredSlides: true,
@@ -46,6 +48,13 @@ class ServicesSwiperEntity {
         swiper: thumbsServicesSwiper, 
       },
     });
+
+    document
+            .querySelectorAll(".accordion-services")
+            .forEach((accordionElement) => {
+                new Accordion(`#${accordionElement.id}`, {openOnInit: [0]});
+                console.log("accordionElement ", accordionElement.id, " initialized");
+            });
   }
 }
 

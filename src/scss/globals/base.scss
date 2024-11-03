@@ -96,11 +96,21 @@
   
       .header-logo {
         display: inline-block;
-  
-        svg {
-          width: 77px;
-          height: 33px;
+
+        .logo-color {
+          opacity: 0;
+          transition: ease 0.5s all;
         }
+
+        .logo-white {
+          opacity: 1;
+          transition: ease 0.5s all;
+        }
+  
+        // svg {
+        //   width: 77px;
+        //   height: 33px;
+        // }
       }
   
       ul {
@@ -175,9 +185,7 @@
         }
       }
   
-      li:last-of-type {
-        display: none;
-      }
+      
     }
   }
   
@@ -190,10 +198,12 @@
     }
   
     .header-logo {
-      svg {
-        g path {
-          fill: black;
-        }
+      .logo-color {
+        opacity: 1;
+      }
+
+      .logo-white {
+        opacity: 0;
       }
     }
   
@@ -638,7 +648,6 @@
     }
   
     #services-swiper {
-      .swiper-slide:not(.swiper-slide-visible),
       .swiper-slide:not(.swiper-slide-active) {
         opacity: 0 !important;
       }

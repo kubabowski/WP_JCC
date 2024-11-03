@@ -31,14 +31,17 @@ $servicesCategories = apply_filters('getServicesCategories', [], [
 
 foreach ($servicesCategories as $term) {
     // Retrieve the image URL stored in the custom field 'tax_image'.
-    $image_url = get_term_meta($term->term_id, 'tax_image', true);
+    // $image_url = get_term_meta($term->term_id, 'tax_image', true);
+    $image_id = get_term_meta($term->term_id, 'tax_image', true);
+    
+    $image_url = wp_get_attachment_url($image_id);
 
     // Add the image URL to the term object.
     $term->image_url = $image_url ? $image_url : null; // Use null or a placeholder if no image is set.
 }
 
 // Debug to see the updated terms with images.
-var_dump($servicesCategories);
+// var_dump($servicesCategories);
 
 $servicesByCategory = [];
 foreach ($services as $service) {
@@ -110,7 +113,7 @@ foreach ($services as $service) {
                                                 </div>
                                                 <div class="<?= cx(['ac-panel']) ?>">
                                                     <p class="<?= cx(['ac-text fw-400 fs-16 lh-24 color-101021']) ?>">
-                                                    <?= $categoryItem[0]['desc'] ?>
+                                                    <?= strip_tags($categoryItem[0]['desc']) ?>
                                                         <span>
                                                             <a class="<?= cx(['link-btnxx']) ?>" href="<?= $categoryItem[0]['url'] ?>">
                                                             <?= __('Produkty', 'jcc-solutions') ?>
@@ -125,7 +128,12 @@ foreach ($services as $service) {
                                 </div>
                             </div>
                             <div class="<?= cx(['col-2']) ?>">
-                                
+                                <div class="<?= cx(['swiper-slide cat-tab']) ?>" >
+                                    <img
+                                    class="<?= cx(['services-img']) ?>"
+                                    src="<?= $category->image_url ?>"
+                                >
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -140,7 +148,6 @@ foreach ($services as $service) {
 </section>
 
 
-<div id="my-element">Hello World</div>
 
 
 

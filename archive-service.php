@@ -9,8 +9,19 @@
 
   
 ?>
-<main id="main" class="flex flex-col flex-grow mt-header-height">
+<main id="main" class="">
   <?php
+
+    get_flexible('servicesOptions', true);
+
+    get_part('sections/servicesOptions', [
+      'items' => [
+        [
+          'title' => $pageTitle,
+        ],
+      ],
+    ]);
+
     get_part('layout/breadcrumbs', [
       'items' => [
         [

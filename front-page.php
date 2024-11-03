@@ -15,7 +15,7 @@
 
   // $homeUrl = home_url('/');
 ?>
-<main id="main" class="flex flex-col flex-grow mt-header-height">
+<main id="main" class="">
   <?php
     get_part('sections/heroSlider');
     get_flexible();
