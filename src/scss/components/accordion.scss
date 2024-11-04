@@ -25,7 +25,9 @@
     border: 0;
 
     &::after {
-      content: url("../../assets/icons/accordion-plus.svg");
+      content: "";
+      // content: url("../../assets/icons/accordion-plus.svg");
+      background-image: url('data:image/svg+xml;utf8,<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 7.59375V26.2604" stroke="%23334EB9" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M6.66699 16.9258H25.3337" stroke="%23334EB9" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/></svg>');
       text-align: center;
       width: 32px;
       height: 32px;
@@ -47,7 +49,7 @@
       opacity: 0;
       padding-left: 48px;
       padding-bottom: 34px;
-      transition: 0.3s all ease;
+      transition: 0.5s all ease;
 
       span {
         display: block;
@@ -78,7 +80,16 @@
 
     & > .ac-header .ac-trigger {
       &::after {
-        content: url("../../assets/icons/accordion-minus.svg");
+        content: "";
+        display: block;
+        width: 32px;
+        height: 33px; 
+        background-image: url('data:image/svg+xml;utf8,<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66699 16.9297H25.3337" stroke="%23334EB9" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/></svg>');
+        background-size: contain; 
+        background-repeat: no-repeat; 
+        text-align: center; 
+      
+
       }
     }
   }

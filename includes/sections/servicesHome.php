@@ -84,7 +84,7 @@ foreach ($services as $service) {
                     <!-- <div id="services-prev" class="swiper-button-prev"></div>
                     <div id="services-next" class="swiper-button-next"></div> -->
                 </div>
-                    <a class="link-btnxx fw-500 fs-16 lh-22" href="<?= $props['link']['url'] ?>">
+                    <a class="link-btn fw-500 fs-16 lh-22" href="<?= $props['link']['url'] ?>">
                         <?= $props['link']['title'] ?>
                     </a>
             </div>
@@ -100,12 +100,13 @@ foreach ($services as $service) {
                         <div class="<?= cx(['slide-content']) ?>">
                             <div class="<?= cx(['col-1']) ?>">
 
-                                <div id="<?= cx(['category-accordion-',$category->term_id]) ?>" class="<?= cx(['accordion-container accordion-services']) ?>">
+                                <div id="accordion-services-<?php echo $category->term_id ?>" class="<?= cx(['accordion-container accordion-services']) ?>">
                                 
                                     <?php foreach ($services as $k => $serviceItem): ?>
                                         
                                         <?php if ($category->term_id == (int)$serviceItem['service-category']): ?>
                                             <div class="<?= cx(['ac']) ?>">
+                                                
                                                 <div class="<?= cx(['ac-header']) ?>">
                                                     <button type="<?= cx(['button']) ?>" class="<?= cx(['ac-trigger fw-500 fs-20 lh-24 color-101021']) ?>">
                                                         <?= $serviceItem['title'] ?>
@@ -115,7 +116,7 @@ foreach ($services as $service) {
                                                     <p class="<?= cx(['ac-text fw-400 fs-16 lh-24 color-101021']) ?>">
                                                         <?= strip_tags($serviceItem['desc']) ?>
                                                         <span>
-                                                            <a class="<?= cx(['link-btnxx']) ?>" href="<?= $serviceItem['url'] ?>">
+                                                            <a class="<?= cx(['link-btn']) ?>" href="<?= $serviceItem['url'] ?>">
                                                             <?= __('Produkty', 'jcc-solutions') ?>
                                                             </a>
                                                         </span>
@@ -146,8 +147,5 @@ foreach ($services as $service) {
 </div>
 
 </section>
-
-
-
 
 

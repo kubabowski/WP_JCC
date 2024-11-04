@@ -118,15 +118,20 @@ h6 {
   }
 
   &::after {
-    content: url("../assets/icons/link-arrow.svg");
+    content: "";
     display: block;
     position: absolute;
     right: 0;
-    padding: 0 10px;
+    padding: 0 7px 0 8px;
     top: 50%;
     transform: translate(0, -50%);
-    transition: ease 0.3s all;
-  }
+    transition: ease 0.4s all;
+    width: 6px; 
+    height: 10px; 
+    background-image: url('data:image/svg+xml;utf8,<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.92969L5 4.92969L1 0.929688" stroke="%23334EB9" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+}
 
   &:hover {
     &::after {

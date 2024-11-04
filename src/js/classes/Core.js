@@ -7,19 +7,20 @@ import Test from './shared/test';
 import HeaderScroll from './shared/HeaderScroll';
 import HeroHomeSwiper from './HomeBannerSwiper';
 import HeroHomeControl from './HeroSwiperControl';
+import Accordion from './Accordion';
 
 export default class Core {
   constructor() {
     new LiteEvents();
     new MobileMenu(); 
     new HeaderScroll(); 
-    // new BasicSlider();
  
     new Test();
 
     new HeroHomeSwiper();
     new HomeServicesSwiper();
     new HeroHomeControl();
+    new Accordion();
 
 
    

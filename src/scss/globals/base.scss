@@ -1,5 +1,16 @@
 
+// .ac-active .ac-panel {
+//   display: block;
+//   /* Additional styles if needed */
+// }
+// .ac-panel {
+//   display: none;
+//   overflow: hidden;
+// }
 
+.swiper-slide-active {
+  z-index: 10;
+}
 
 @keyframes linearFromLeft {
   from {
