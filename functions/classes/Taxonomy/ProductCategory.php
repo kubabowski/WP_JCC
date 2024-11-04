@@ -16,17 +16,17 @@
     public function registerTaxonomy()
     {
       $labels = [
-        'name'              => __('Kategorie produktów', 'bud-went'),
-        'singular_name'     => __('Kategoria produktów', 'bud-went'),
-        'search_items'      => __('Szukaj kategorię produktów', 'bud-went'),
-        'all_items'         => __('Wszystkie kategorie produktów', 'bud-went'),
-        'parent_item'       => __('Kategoria produktów rodzic', 'bud-went'),
-        'parent_item_colon' => __('Kategoria produktów rodzic:', 'bud-went'),
-        'edit_item'         => __('Edytuj kategorię produktów', 'bud-went'),
-        'update_item'       => __('Aktualizuj kategorię produktów', 'bud-went'),
-        'add_new_item'      => __('Dodaj kategorię produktów', 'bud-went'),
-        'new_item_name'     => __('Nowa kategoria produktów [nazwa]', 'bud-went'),
-        'menu_name'         => __('Kategorie produktów', 'bud-went'),
+        'name'              => __('Kategorie produktów', 'jcc-solutions'),
+        'singular_name'     => __('Kategoria produktów', 'jcc-solutions'),
+        'search_items'      => __('Szukaj kategorię produktów', 'jcc-solutions'),
+        'all_items'         => __('Wszystkie kategorie produktów', 'jcc-solutions'),
+        'parent_item'       => __('Kategoria produktów rodzic', 'jcc-solutions'),
+        'parent_item_colon' => __('Kategoria produktów rodzic:', 'jcc-solutions'),
+        'edit_item'         => __('Edytuj kategorię produktów', 'jcc-solutions'),
+        'update_item'       => __('Aktualizuj kategorię produktów', 'jcc-solutions'),
+        'add_new_item'      => __('Dodaj kategorię produktów', 'jcc-solutions'),
+        'new_item_name'     => __('Nowa kategoria produktów [nazwa]', 'jcc-solutions'),
+        'menu_name'         => __('Kategorie produktów', 'jcc-solutions'),
       ];
 
       $args = [

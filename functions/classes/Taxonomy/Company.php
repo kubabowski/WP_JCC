@@ -16,17 +16,17 @@ class Company
     public function registerTaxonomy()
     {
         $labels = [
-            'name'              => __('Firmy', 'bud-went'),
-            'singular_name'     => __('Firma', 'bud-went'),
-            'search_items'      => __('Szukaj firm', 'bud-went'),
-            'all_items'         => __('Wszystkie firmy', 'bud-went'),
-            'parent_item'       => __('Firma nadrzędna', 'bud-went'),
-            'parent_item_colon' => __('Firma nadrzędna:', 'bud-went'),
-            'edit_item'         => __('Edytuj firmę', 'bud-went'),
-            'update_item'       => __('Aktualizuj firmę', 'bud-went'),
-            'add_new_item'      => __('Dodaj nową firmę', 'bud-went'),
-            'new_item_name'     => __('Nazwa nowej firmy', 'bud-went'),
-            'menu_name'         => __('Firmy', 'bud-went'),
+            'name'              => __('Firmy', 'jcc-solutions'),
+            'singular_name'     => __('Firma', 'jcc-solutions'),
+            'search_items'      => __('Szukaj firm', 'jcc-solutions'),
+            'all_items'         => __('Wszystkie firmy', 'jcc-solutions'),
+            'parent_item'       => __('Firma nadrzędna', 'jcc-solutions'),
+            'parent_item_colon' => __('Firma nadrzędna:', 'jcc-solutions'),
+            'edit_item'         => __('Edytuj firmę', 'jcc-solutions'),
+            'update_item'       => __('Aktualizuj firmę', 'jcc-solutions'),
+            'add_new_item'      => __('Dodaj nową firmę', 'jcc-solutions'),
+            'new_item_name'     => __('Nazwa nowej firmy', 'jcc-solutions'),
+            'menu_name'         => __('Firmy', 'jcc-solutions'),
         ];
 
         $args = [

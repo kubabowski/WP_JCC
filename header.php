@@ -25,6 +25,7 @@
   <meta name="msapplication-TileColor" content="#00654a">
   <meta name="msapplication-config" content="<?= $faviconUrl ?>browserconfig.xml">
   <meta name="theme-color" content="#00654a">
+  <script src="<?= THEME_URL.'public/dist/core.js' ?>"></script>
 
   <?php wp_head(); ?>
 

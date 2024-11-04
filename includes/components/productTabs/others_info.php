@@ -15,7 +15,7 @@
           'src' => $item['image']['sizes']['square-lg'] ?? $item['image']['url'],
           'width' => $item['image']['width'],
           'height' => $item['image']['height'],
-          'alt' => $item['image']['alt'] ?? __('Schemat produktu', 'bud-went'),
+          'alt' => $item['image']['alt'] ?? __('Schemat produktu', 'jcc-solutions'),
         ]],
       ]); ?>
     </div>

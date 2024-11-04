@@ -6,7 +6,7 @@
   $keyPrefix = wp_unique_id('content-tabs-');
   $activeKey = $keyPrefix . '-' . $props['active'] ?? $items[0]['key'] ?? 0;
 
-  $selectPlaceholder = __('Wybierz', 'bud-went');
+  $selectPlaceholder = __('Wybierz', 'jcc-solutions');
 
   if (isset($props['class'])) $rootClass .= ' ' . $props['class'];
   if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];

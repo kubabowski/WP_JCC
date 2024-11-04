@@ -1,5 +1,5 @@
 {
-  "name": "bud-went",
+  "name": "jcc-solutions",
   "version": "1.0.0",
   "description": "build frontend bundle",
   "main": "webpack.mix.js",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git.crafton.pl/crafton/bud-went/git"
+    "url": "git+https://git.crafton.pl/crafton/jcc-solutions/git"
   },
   "author": "Crafton",
   "license": "crafton",
   "bugs": {
-    "url": "https://git.crafton.pl/crafton/bud-went/issues"
+    "url": "https://git.crafton.pl/crafton/jcc-solutions/issues"
   },
-  "homepage": "https://git.crafton.pl/crafton/bud-went/README",
+  "homepage": "https://git.crafton.pl/crafton/jcc-solutions/README",
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-react": "^7.18.6",

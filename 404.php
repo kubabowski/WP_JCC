@@ -1,8 +1,8 @@
 <?php
   get_header();
 
-  $pageTitle = __('404', 'bud-went');
-  $pageDescription = __('Nie znaleziono strony', 'bud-went');
+  $pageTitle = __('404', 'jcc-solutions');
+  $pageDescription = __('Nie znaleziono strony', 'jcc-solutions');
 ?>
 <main id="main" class="flex flex-col flex-grow mt-header-height">
   <?php
@@ -18,7 +18,7 @@
       'title' => $pageTitle,
       'text' => $pageDescription,
       'button' => [
-        'title' => __('Strona główna', 'bud-went'),
+        'title' => __('Strona główna', 'jcc-solutions'),
         'url' => home_url('/'),
       ],
     ]);

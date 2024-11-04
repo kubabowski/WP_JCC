@@ -53,7 +53,7 @@
                     'src' => $item['image']['sizes']['full-hd'] ?? $item['image']['url'],
                     'width' => $item['image']['width'],
                     'height' => $item['image']['height'],
-                    'alt' => $item['image']['alt'] ?? __('Obrazek w galerii', 'bud-went'),
+                    'alt' => $item['image']['alt'] ?? __('Obrazek w galerii', 'jcc-solutions'),
                   ]],
                 ]); ?>
               </div>

@@ -42,11 +42,11 @@
   $orderOptions = [
     [
       'value' => 'DESC',
-      'label' => __('Od najnowszych', 'bud-went'),
+      'label' => __('Od najnowszych', 'jcc-solutions'),
     ],
     [
       'value' => 'ASC',
-      'label' => __('Od najstarszych', 'bud-went'),
+      'label' => __('Od najstarszych', 'jcc-solutions'),
     ],
   ];
 
@@ -74,18 +74,18 @@
           <div class="flex items-center text-16px/1_2">
             <strong
               class="font-medium text-neutral-dark me-6px"
-            ><?= __('Produkty', 'bud-went') ?>:</strong>
+            ><?= __('Produkty', 'jcc-solutions') ?>:</strong>
             <span><?= $total ?></span>
           </div>
 
           <div class="flex items-center text-16px/1_2">
             <strong
               class="font-medium text-neutral-dark me-6px"
-            ><?= __('Na stronę', 'bud-went') ?>:</strong>
+            ><?= __('Na stronę', 'jcc-solutions') ?>:</strong>
             <select
               name="per_page"
               class="px-6px -mx-6px"
-              aria-label="<?= __('Choose number of services on page', 'bud-went') ?>"
+              aria-label="<?= __('Choose number of services on page', 'jcc-solutions') ?>"
               data-services-filters-select
             >
               <?php foreach ($perPageOptions as $perPageOption): ?>
@@ -100,11 +100,11 @@
           <div class="flex items-center text-16px/1_2">
             <strong
               class="font-medium text-neutral-dark me-6px"
-            ><?= __('Sortuj', 'bud-went') ?>:</strong>
+            ><?= __('Sortuj', 'jcc-solutions') ?>:</strong>
             <select
               name="order"
               class="px-6px -mx-6px"
-              aria-label="<?= __('Wybierz sortowanie', 'bud-went') ?>"
+              aria-label="<?= __('Wybierz sortowanie', 'jcc-solutions') ?>"
               data-services-filters-select
             >
               <?php foreach ($orderOptions as $orderOption): ?>
@@ -121,7 +121,7 @@
               type="search"
               name="search"
               value="<?= $search ?>"
-              placeholder="<?= __('Enter Service name', 'bud-went') ?>"
+              placeholder="<?= __('Enter Service name', 'jcc-solutions') ?>"
               class="block w-full h-[60px] bg-neutral/5 py-8px ps-16px pe-40px"
             >
             <button

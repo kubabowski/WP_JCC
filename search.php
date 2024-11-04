@@ -4,7 +4,7 @@
 $query = get_search_query();
 $title = '"' . $query . '"';
 
-$noResults = __('Nic nie znaleziono', 'bud-went');
+$noResults = __('Nic nie znaleziono', 'jcc-solutions');
 $rootDescription = $productsOptions['description'] ?? '';
 
 $products =  apply_filters('getProducts', [], [
@@ -30,11 +30,11 @@ $totalResults = $totalProducts + $totalPosts;
 function get_result_label($count)
 {
   if ($count == 1) {
-    return $count . " " . __('Wynik', 'bud-went');
+    return $count . " " . __('Wynik', 'jcc-solutions');
   } elseif ($count % 10 >= 2 && $count % 10 <= 4 && ($count % 100 < 10 || $count % 100 >= 20)) {
-    return $count . " " . __('Wyniki', 'bud-went');
+    return $count . " " . __('Wyniki', 'jcc-solutions');
   } else {
-    return $count . " " . __('Wyników', 'bud-went');
+    return $count . " " . __('Wyników', 'jcc-solutions');
   }
 }
 
@@ -60,12 +60,12 @@ function get_result_label($count)
         <div class="wrapper">
           <div class="flex flex-wrap flex-row gap-24px justify-between">
             <p class="flex flex-row items-center gap-8px">
-              <span class="text-24px/1_2 font-medium text-neutral-dark"><?= __('Produkty', 'bud-went') ?></span>
+              <span class="text-24px/1_2 font-medium text-neutral-dark"><?= __('Produkty', 'jcc-solutions') ?></span>
               <span class="text-18px/1_2 text-neutral-gray"><?= get_result_label($totalProducts); ?> </span>
             </p>
 
             <?php get_part('components/button', [
-              'text' => __('Zobacz wszystkie produkty', 'bud-went'),
+              'text' => __('Zobacz wszystkie produkty', 'jcc-solutions'),
 
               'url' => add_query_arg('search', $query, get_post_type_archive_link('product')),
               'theme' => 'red',
@@ -90,7 +90,7 @@ function get_result_label($count)
 
           <div class="flex flex-wrap flex-row gap-24px justify-between">
             <p class="flex flex-row items-center gap-8px">
-              <span class="text-24px/1_2 font-medium text-neutral-dark"><?= __('Inne', 'bud-went') ?></span>
+              <span class="text-24px/1_2 font-medium text-neutral-dark"><?= __('Inne', 'jcc-solutions') ?></span>
               <span class="text-18px/1_2 text-neutral-gray"><?= get_result_label($totalPosts); ?> </span>
             </p>
 
@@ -133,7 +133,7 @@ function get_result_label($count)
     <section class="mt-48px"></section>
     <div class="wrapper">
       <p class="text-24px/1_2 font-medium text-neutral-dark">
-        <?= __('Nie znaleziono wyników', 'bud-went') ?>
+        <?= __('Nie znaleziono wyników', 'jcc-solutions') ?>
       </p>
     </div>
     </section>

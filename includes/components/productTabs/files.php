@@ -4,7 +4,7 @@
 <div>
   <h3
     class="text-24px/1_2 font-medium mb-24px"
-  ><?= __('Pliki do pobrania', 'bud-went') ?></h3>
+  ><?= __('Pliki do pobrania', 'jcc-solutions') ?></h3>
   <ul class="block">
     <?php foreach ($items as $item): ?>
       <li class="block">

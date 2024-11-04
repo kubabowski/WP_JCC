@@ -58,7 +58,7 @@
             'src' => $item['chart']['sizes']['square-lg'] ?? $item['chart']['url'],
             'width' => $item['chart']['width'],
             'height' => $item['chart']['height'],
-            'alt' => $item['chart']['alt'] ?? __('Wykres charakterystyki', 'bud-went'),
+            'alt' => $item['chart']['alt'] ?? __('Wykres charakterystyki', 'jcc-solutions'),
           ]],
         ]); ?>
       </div>

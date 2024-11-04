@@ -1,0 +1,7 @@
+<div class="breadcrump-arrow">
+    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.49902 2.99927H0.499023" stroke="white" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.99902 5.5L7.49902 3" stroke="white" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.99902 0.499268L7.49902 2.99927" stroke="white" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</div>

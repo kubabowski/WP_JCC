@@ -26,7 +26,7 @@
       ' group-hover:opacity-100 hover:text-white/80 transition-all duration-300',
       $smallText ? ' lg:text-18px/1_2' : ' lg:text-20px/1_2',
     ]); ?>">
-      <span><?= __('Dowiedz się więcej', 'bud-went'); ?></span>
+      <span><?= __('Dowiedz się więcej', 'jcc-solutions'); ?></span>
       <span><?= get_icon('arrow-right'); ?></span>
     </a>
   </div>

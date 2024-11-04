@@ -18,7 +18,7 @@ if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];
             'src' => $image['sizes']['square-lg'] ?? $image['url'],
             'width' => $image['width'],
             'height' => $image['height'],
-            'alt' => $image['alt'] ?? __('Zdjęcie', 'bud-went'),
+            'alt' => $image['alt'] ?? __('Zdjęcie', 'jcc-solutions'),
           ]],
         ]); ?>
 

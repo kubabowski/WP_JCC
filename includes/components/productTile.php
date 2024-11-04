@@ -13,7 +13,7 @@
     <span
       class="flex items-center px-32px py-8px min-h-[3rem] text-16px/1_6 bg-neutral-red text-neutral-white absolute top-0 left-0"
       style="clip-path: polygon(14px 0%, 100% 0%, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0% 100%, 0% 14px);"
-    ><?= __('Promocja', 'bud-went') ?></span>
+    ><?= __('Promocja', 'jcc-solutions') ?></span>
   <?php endif; ?>
     <div class="relative h-0 w-full pt-5/4">
       <?php if ($item['image']): ?>
@@ -23,7 +23,7 @@
             'src' => $item['image']['sizes']['square-sm'] ?? $item['image']['url'],
             'width' => $item['image']['width'],
             'height' => $item['image']['height'],
-            'alt' => $item['image']['alt'] ?? __('Zdjęcie produktu', 'bud-went'),
+            'alt' => $item['image']['alt'] ?? __('Zdjęcie produktu', 'jcc-solutions'),
           ]],
         ]); ?>
       <?php endif; ?>

@@ -11,7 +11,7 @@
 <div>
   <h3
     class="text-24px/1_2 font-medium mb-24px"
-  ><?= __('Zobacz także', 'bud-went') ?></h3>
+  ><?= __('Zobacz także', 'jcc-solutions') ?></h3>
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-32px">
     <?php foreach ($items as $item): ?>
       <a
@@ -26,7 +26,7 @@
                 'src' => $item['image']['sizes']['square-sm'] ?? $item['image']['url'],
                 'width' => $item['image']['width'],
                 'height' => $item['image']['height'],
-                'alt' => $item['image']['alt'] ?? __('Zdjęcie produktu', 'bud-went'),
+                'alt' => $item['image']['alt'] ?? __('Zdjęcie produktu', 'jcc-solutions'),
               ]],
             ]); ?>
           <?php endif; ?>

@@ -4,7 +4,7 @@
   $archiveOptions = get_field('archive_options', 'option') ?? [];
   $productsOptions = $archiveOptions['knowledge_base'] ?? [];
 
-  $pageTitle = $productsOptions['title'] ?? __('Baza wiedzy', 'bud-went');
+  $pageTitle = $productsOptions['title'] ?? __('Baza wiedzy', 'jcc-solutions');
   $pageDescription = $productsOptions['description'] ?? '';
 ?>
 <main id="main" class="flex flex-col flex-grow mt-header-height">

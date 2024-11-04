@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "aeonik";
+  src: url("../assets/fonts-webkit/aeonik-black-webfont.woff2") format("woff2"),
+    url("../assets/fonts-webkit/aeonik-black-webfont.woff") format("woff");
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aeonik";
+  src: url("../assets/fonts-webkit/aeonik-bold-webfont.woff2") format("woff2"),
+    url("../assets/fonts-webkit/aeonik-bold-webfont.woff") format("woff");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aeonik";
+  src: url("../assets/fonts-webkit/aeonik-medium-webfont.woff2") format("woff2"),
+    url("../assets/fonts-webkit/aeonik-medium-webfont.woff") format("woff");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aeonik";
+  src: url("../assets/fonts-webkit/aeonik-regular-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts-webkit/aeonik-regular-webfont.woff") format("woff");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aeonik";
+  src: url("../assets/fonts-webkit/aeonik-thin-webfont.woff2") format("woff2"),
+    url("../assets/fonts-webkit/aeonik-thin-webfont.woff") format("woff");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aeonik";
+  src: url("../assets/fonts-webkit/aeonik-air-webfont.woff2") format("woff2"),
+    url("../assets/fonts-webkit/aeonik-air-webfont.woff") format("woff");
+  font-weight: 200; /* Air */
+  font-style: normal;
+}

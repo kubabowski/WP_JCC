@@ -43,7 +43,7 @@ if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];
           type="search"
           name="s"
           value="<?= $query ?>"
-          placeholder="<?= __('Czego szukasz?', 'bud-went') ?>"
+          placeholder="<?= __('Czego szukasz?', 'jcc-solutions') ?>"
           class="block w-full h-58px p-8px text16px/1_6 border-b border-border-gray"
           data-header-search-input>
         <button

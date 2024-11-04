@@ -21,7 +21,7 @@ if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];
                 'src' => $row['logo']['sizes']['square-lg'] ?? $row['logo']['url'],
                 'width' => $row['logo']['width'],
                 'height' => $row['logo']['height'],
-                'alt' => $row['logo']['alt'] ?? __('logo', 'bud-went'),
+                'alt' => $row['logo']['alt'] ?? __('logo', 'jcc-solutions'),
               ]],
             ]); ?>
 
@@ -46,7 +46,7 @@ if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];
                 'src' => $row['img']['sizes']['square-lg'] ?? $row['img']['url'],
                 'width' => $row['img']['width'],
                 'height' => $row['img']['height'],
-                'alt' => $row['img']['alt'] ?? __('Zdjęcie', 'bud-went'),
+                'alt' => $row['img']['alt'] ?? __('Zdjęcie', 'jcc-solutions'),
               ]],
             ]); ?>
           </div>

@@ -5,6 +5,8 @@ import MobileMenu from './MobileMenu';
 import HomeServicesSwiper from './HomeServicesSwiper';
 import Test from './shared/test';
 import HeaderScroll from './shared/HeaderScroll';
+import HeroHomeSwiper from './HomeBannerSwiper';
+import HeroHomeControl from './HeroSwiperControl';
 
 export default class Core {
   constructor() {
@@ -12,10 +14,12 @@ export default class Core {
     new MobileMenu(); 
     new HeaderScroll(); 
     // new BasicSlider();
-
+ 
     new Test();
 
+    new HeroHomeSwiper();
     new HomeServicesSwiper();
+    new HeroHomeControl();
 
 
    

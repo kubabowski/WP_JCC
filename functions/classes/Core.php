@@ -24,7 +24,8 @@
 
       /* --- PostType --- */
       new PostType\Product();
-      new PostType\Service();
+      new PostType\Service(); 
+      new PostType\CaseStudy();
       new PostType\Insight();
       // new PostType\Knowledge();
       // new PostType\Training();
@@ -38,6 +39,7 @@
       new Taxonomy\Company();
       new Taxonomy\Topic();
       new Taxonomy\ServiceCategory();
+      new Taxonomy\CaseStudyCategory();
       // new Taxonomy\OptionsGropu();
 
 

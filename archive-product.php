@@ -4,7 +4,7 @@
   $archiveOptions = get_field('archive_options', 'option') ?? [];
   $productsOptions = $archiveOptions['products'] ?? [];
 
-  $pageTitle = $productsOptions['title'] ?? __('Produkty', 'bud-went');
+  $pageTitle = $productsOptions['title'] ?? __('Produkty', 'jcc-solutions');
   $pageDescription = $productsOptions['description'] ?? '';
 
   $page = intval(get_query_var('page', 1));

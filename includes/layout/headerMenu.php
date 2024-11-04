@@ -19,12 +19,14 @@
           : 'fw-500 fs-16 lh-24',
       ]);
 
+      $dropdownClass = '';
       $itemLinkAttr = '';
       if ($hasChildren) {
         $itemLinkAttr .= ' data-submenu-parent-link="' . $itemId . '"';
+        $dropdownClass .= ' dropdown';
       }
     ?>
-    <li class="relative">
+    <li class="relative <?php echo $dropdownClass ?>">
       <a
         href="<?= $item['url'] ?>"
         target="<?= $item['target'] ?>"
@@ -33,26 +35,22 @@
       >
         <span class="text-16px/1_5"><?= $item['name'] ?></span>
         <?php if ($hasChildren): ?>
-          <?php get_icon('chevron-down', 'icon text-14px/1 ms-16px'); ?>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.786133 1L4.78613 5L8.78613 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         <?php endif; ?>
       </a>
       <?php if ($hasChildren): ?>
-      <ul
-        class="<?= cx(['fw-500 fs-16 lh-24 dropdown']) ?>"
-      >
+      <ul class="<?=  cx(['nav-dropdown-content']) ?>">
         <?php foreach ($item['children'] as $subitem): ?>
         <?php
-          $subitemLinkClass = ' ' . cx([
-            $subitem['active']
-              ? 'fw-500 fs-16 lh-24 active'
-              : 'fw-500 fs-16 lh-24',
-          ]);
+          $subitemLinkClass = ' ' . cx(['fw-500 fs-16 lh-24']);
         ?>
         <li>
           <a
             href="<?= $subitem['url'] ?>"
             target="<?= $subitem['target'] ?>"
-            class="p-8px flex items-center<?= $subitemLinkClass ?>"
+            class="<?= $subitemLinkClass ?>"
           >
             <span><?= $subitem['name'] ?></span>
           </a>

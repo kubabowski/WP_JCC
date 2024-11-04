@@ -7,7 +7,7 @@
   $archiveOptions = get_field('archive_options', 'option') ?? [];
   $productsOptions = $archiveOptions['products'] ?? [];
 
-  $rootTitle = $productsOptions['title'] ?? __('Produkty', 'bud-went');
+  $rootTitle = $productsOptions['title'] ?? __('Produkty', 'jcc-solutions');
   $rootDescription = $productsOptions['description'] ?? '';
 
   $pageTitle = $term->name;

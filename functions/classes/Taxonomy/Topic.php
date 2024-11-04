@@ -16,15 +16,15 @@ class Topic
     public function registerTaxonomy()
     {
         $labels = [
-            'name'              => __('Tematy', 'bud-went'),
-            'singular_name'     => __('Temat', 'bud-went'),
-            'search_items'      => __('Szukaj tematów', 'bud-went'),
-            'all_items'         => __('Wszystkie tematy', 'bud-went'),
-            'edit_item'         => __('Edytuj temat', 'bud-went'),
-            'update_item'       => __('Aktualizuj temat', 'bud-went'),
-            'add_new_item'      => __('Dodaj nowy temat', 'bud-went'),
-            'new_item_name'     => __('Nazwa nowego tematu', 'bud-went'),
-            'menu_name'         => __('Tematy', 'bud-went'),
+            'name'              => __('Tematy', 'jcc-solutions'),
+            'singular_name'     => __('Temat', 'jcc-solutions'),
+            'search_items'      => __('Szukaj tematów', 'jcc-solutions'),
+            'all_items'         => __('Wszystkie tematy', 'jcc-solutions'),
+            'edit_item'         => __('Edytuj temat', 'jcc-solutions'),
+            'update_item'       => __('Aktualizuj temat', 'jcc-solutions'),
+            'add_new_item'      => __('Dodaj nowy temat', 'jcc-solutions'),
+            'new_item_name'     => __('Nazwa nowego tematu', 'jcc-solutions'),
+            'menu_name'         => __('Tematy', 'jcc-solutions'),
         ];
 
         $args = [

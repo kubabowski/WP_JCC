@@ -15,7 +15,7 @@
         'active' => 'general_info',
         'items' => array_filter([
           $data['general_info'] ? [
-            'label' => __('Informacje ogólne', 'bud-went'),
+            'label' => __('Informacje ogólne', 'jcc-solutions'),
             'key' => 'general_info',
             'content' => get_part('components/productTabs/general_info', [
               'content' => $data['general_info'],
@@ -23,7 +23,7 @@
           ] : null,
 
           $data['technical_info'] ? [
-            'label' => __('Dane techniczne', 'bud-went'),
+            'label' => __('Dane techniczne', 'jcc-solutions'),
             'key' => 'technical_info',
             'content' => get_part('components/productTabs/general_info', [
               'content' => $data['technical_info'],
@@ -31,7 +31,7 @@
           ] : null,
 
           $data['characteristic'] ? [
-            'label' => __('Charakterystyka produktu', 'bud-went'),
+            'label' => __('Charakterystyka produktu', 'jcc-solutions'),
             'key' => 'characteristic',
             'content' => get_part('components/productTabs/characteristic', [
               'items' => $data['characteristic'],
@@ -39,7 +39,7 @@
           ] : null,
 
           $data['sizes'] ? [
-            'label' => __('Wymiary', 'bud-went'),
+            'label' => __('Wymiary', 'jcc-solutions'),
             'key' => 'sizes',
             'content' => get_part('components/productTabs/sizes', [
               'items' => $data['sizes'],
@@ -47,7 +47,7 @@
           ] : null,
 
           $data['others_info'] ? [
-            'label' => __('Pozostałe informacje', 'bud-went'),
+            'label' => __('Pozostałe informacje', 'jcc-solutions'),
             'key' => 'others_info',
             'content' => get_part('components/productTabs/others_info', [
               'items' => $data['others_info'],
@@ -55,7 +55,7 @@
           ] : null,
 
           $data['accessories'] ? [
-            'label' => __('Akcesoria', 'bud-went'),
+            'label' => __('Akcesoria', 'jcc-solutions'),
             'key' => 'accessories',
             'content' => get_part('components/productTabs/accessories', [
               'items' => $data['accessories'],
@@ -63,7 +63,7 @@
           ] : null,
 
           $data['files'] ? [
-            'label' => __('Pliki', 'bud-went'),
+            'label' => __('Pliki', 'jcc-solutions'),
             'key' => 'files',
             'content' => get_part('components/productTabs/files', [
               'items' => $data['files'],

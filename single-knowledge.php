@@ -24,7 +24,7 @@ if (!empty($authorFirstName) || !empty($authorLastName)) {
   get_part('layout/breadcrumbs', [
     'items' => [
       [
-        'title' => __('Baza wiedzy', 'bud-went'),
+        'title' => __('Baza wiedzy', 'jcc-solutions'),
         'url' => get_post_type_archive_link('knowledge'),
       ],
       [
@@ -98,7 +98,7 @@ if (!empty($authorFirstName) || !empty($authorLastName)) {
 
   <?php
   get_part('sections/latestPosts', [
-    'title' => __('Podobne wpisy', 'bud-went'),
+    'title' => __('Podobne wpisy', 'jcc-solutions'),
   ]);
   ?>
 

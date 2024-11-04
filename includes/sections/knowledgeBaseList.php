@@ -42,7 +42,7 @@
               ]) ?>"
               href="<?= $item['url'] ?>"
             >
-              <span><?= __('Czytaj cały artykuł', 'bud-went') ?></span>
+              <span><?= __('Czytaj cały artykuł', 'jcc-solutions') ?></span>
               <span><?= get_icon('arrow-right', 'icon') ?></span>
             </a>
           </div>

@@ -32,7 +32,7 @@
             'src' => $props['image']['sizes']['square-lg'] ?? $props['image']['url'],
             'width' => $props['image']['width'],
             'height' => $props['image']['height'],
-            'alt' => $props['image']['alt'] ?? __('Schemat produktu', 'bud-went'),
+            'alt' => $props['image']['alt'] ?? __('Schemat produktu', 'jcc-solutions'),
           ]],
         ]); ?>
       </div>

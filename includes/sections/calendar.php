@@ -38,7 +38,7 @@ $companies = get_terms([
           <!-- companies -->
           <div>
             <select name="company" id="company">
-              <option value=""><?= __('Wszystkie', 'bud-went') ?></option>
+              <option value=""><?= __('Wszystkie', 'jcc-solutions') ?></option>
               <?php
               if (!empty($companies)) {
                 foreach ($companies as $company) {
@@ -47,13 +47,13 @@ $companies = get_terms([
               }
               ?>
             </select>
-            <label for="company"><?= __('Firma', 'bud-went') ?></label>
+            <label for="company"><?= __('Firma', 'jcc-solutions') ?></label>
           </div>
 
           <!-- topics -->
           <div>
             <select name="topic" id="topic">
-              <option value=""><?= __('Wszystkie', 'bud-went') ?></option>
+              <option value=""><?= __('Wszystkie', 'jcc-solutions') ?></option>
               <?php
               if (!empty($topics)) {
                 foreach ($topics as $topic) {
@@ -62,7 +62,7 @@ $companies = get_terms([
               }
               ?>
             </select>
-            <label for="topic"><?= __('Tematyka szkolenia', 'bud-went') ?></label>
+            <label for="topic"><?= __('Tematyka szkolenia', 'jcc-solutions') ?></label>
           </div>
 
         </div>
@@ -105,13 +105,13 @@ $companies = get_terms([
                         'text-18px/1_6 text-neutral-dark/40',
                         '[&>span]:py-4px md:[&>span]:py-8px [&>span]:px-6px md:[&>span]:px-[10px]',
                       ]) ?>">
-            <span><?= __('Pon', 'bud-went') ?></span>
-            <span><?= __('Wto', 'bud-went') ?></span>
-            <span><?= __('Śro', 'bud-went') ?></span>
-            <span><?= __('Czw', 'bud-went') ?></span>
-            <span><?= __('Pią', 'bud-went') ?></span>
-            <span><?= __('Sob', 'bud-went') ?></span>
-            <span><?= __('Nie', 'bud-went') ?></span>
+            <span><?= __('Pon', 'jcc-solutions') ?></span>
+            <span><?= __('Wto', 'jcc-solutions') ?></span>
+            <span><?= __('Śro', 'jcc-solutions') ?></span>
+            <span><?= __('Czw', 'jcc-solutions') ?></span>
+            <span><?= __('Pią', 'jcc-solutions') ?></span>
+            <span><?= __('Sob', 'jcc-solutions') ?></span>
+            <span><?= __('Nie', 'jcc-solutions') ?></span>
           </div>
           <div class="<?= cx([
                         'days',
@@ -127,7 +127,7 @@ $companies = get_terms([
       <!-- calendar sidebar -->
       <div class="col-span-12 md:col-span-4">
         <header class="p-8px bg-neutral-dark/5 mb-8px">
-          <p class="text-20px/1_6 font-medium text-neutral-dark"><?= __('Lista szkoleń', 'bud-went') ?></p>
+          <p class="text-20px/1_6 font-medium text-neutral-dark"><?= __('Lista szkoleń', 'jcc-solutions') ?></p>
         </header>
         <div class="calendar-sidebar [&_.active-event]:cursor-pointer [&.featured_.event:not(.highlight):not(.active)]:hidden"></div>
       </div>

@@ -14,7 +14,7 @@
     get_part('layout/breadcrumbs', [
       'items' => [
         [
-          'title' => __('Produkty', 'bud-went'),
+          'title' => __('Produkty', 'jcc-solutions'),
           'url' => get_post_type_archive_link('product'),
         ],
         [
@@ -27,7 +27,7 @@
       'text' => $pageDescription,
       'size' => 'small',
       'button' => [
-        'title' => __('Zamów produkt', 'bud-went'),
+        'title' => __('Zamów produkt', 'jcc-solutions'),
         'url' => '#',
       ],
     ]);

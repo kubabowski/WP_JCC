@@ -26,21 +26,15 @@
             
         </div>
         <div class="nav-btns">
-            <a class="lang-choose" href=#>
-                <?php get_icon('lang-pl', 'icon w-[80px] h-[35px]'); ?>
-                <?php get_icon('lang-en', 'icon w-[80px] h-[35px]'); ?>
-                <span class="fw-500 fs-14 lh-24px">PL</span>
-            </a>
+
+            <?php get_part('components/langSwitcher', [
+              'class' => 'header-lang',
+            ]); ?>
+
             <?php if ($headerButton): ?>
               <a
                 href="<?= $headerButton['url'] ?>"
-                class="<?= cx([
-                  'hidden md:flex items-center',
-                  'min-h-[66px] px-20px py-8px',
-                  'text-16px/1_25 font-medium',
-                  'custom-gradient-border',
-                  'transition-colors ',
-                ]) ?>"
+                class="<?= cx([' btn btn-blue fw-500 fs-16 ']) ?>"
               ><?= $headerButton['title'] ?></a>
             <?php endif; ?>
             <button

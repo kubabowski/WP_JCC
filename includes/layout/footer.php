@@ -53,6 +53,6 @@
 
     <div class="mt-24px md:mt-0">
       <p><?= $footerCopy ?></p>
-      <p class="mt-4px"><?= __('Projekt i wdrożenie:', 'bud-went') ?> <a href="https://crafton.pl" target="_blank" class="text-neutral-white hover:text-neutral-white/80 transition-colors">Crafton</a></p>
+      <p class="mt-4px"><?= __('Projekt i wdrożenie:', 'jcc-solutions') ?> <a href="https://crafton.pl" target="_blank" class="text-neutral-white hover:text-neutral-white/80 transition-colors">Crafton</a></p>
     </div>
 

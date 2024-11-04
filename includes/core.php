@@ -5,7 +5,7 @@ define('THEME_DIR', get_template_directory() . DIRECTORY_SEPARATOR);
 define('INCLUDES', THEME_DIR . 'includes' . DIRECTORY_SEPARATOR);
 define('FLEXIBLE', INCLUDES . 'flexible' . DIRECTORY_SEPARATOR);
 
-define('THEME_DOMAIN', 'bud-went');
+define('THEME_DOMAIN', 'jcc-solutions');
 define('DEFAULT_LOCALE', 'pl_PL');
 
 include_once(__DIR__ . DIRECTORY_SEPARATOR . 'helpers/get_part.php');

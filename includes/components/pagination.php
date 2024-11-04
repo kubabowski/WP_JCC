@@ -32,17 +32,17 @@
     <input
       name="page"
       value="<?= $page ?>"
-      aria-label="<?= __('Wpisz numer strony i zatwierdz Enterem', 'bud-went') ?>"
+      aria-label="<?= __('Wpisz numer strony i zatwierdz Enterem', 'jcc-solutions') ?>"
       class="size-40px text-center border border-border-gray py-8px px-4px"
       <?= $pages === 1 ? 'readonly' : '' ?>
     >
-    <span><?= __('z', 'bud-went') ?> <?= $pages ?></span>
+    <span><?= __('z', 'jcc-solutions') ?> <?= $pages ?></span>
   </form>
   <a
     <?php if ($page > 1): ?>
       href="<?= add_query_arg('page', $page - 1) ?>"
     <?php endif; ?>
-    aria-lable="<?= __('Poprzednia strona', 'bud-went') ?>"
+    aria-lable="<?= __('Poprzednia strona', 'jcc-solutions') ?>"
     class="<?= cx([
       $arrowClass,
       'top-0 left-0',
@@ -53,7 +53,7 @@
     <?php if ($page < $pages): ?>
       href="<?= add_query_arg('page', $page + 1) ?>"
     <?php endif; ?>
-    aria-lable="<?= __('Następna strona', 'bud-went') ?>"
+    aria-lable="<?= __('Następna strona', 'jcc-solutions') ?>"
     class="<?= cx([
       $arrowClass,
       'top-0 right-0',

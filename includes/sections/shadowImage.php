@@ -14,7 +14,7 @@ if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];
         'src' => $props['image']['sizes']['square-lg'] ?? $props['image']['url'],
         'width' => $props['image']['width'],
         'height' => $props['image']['height'],
-        'alt' => $props['image']['alt'] ?? __('Zdjęcie', 'bud-went'),
+        'alt' => $props['image']['alt'] ?? __('Zdjęcie', 'jcc-solutions'),
       ]],
     ]); ?>
     <div class="<?= cx([

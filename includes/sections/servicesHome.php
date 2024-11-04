@@ -101,21 +101,21 @@ foreach ($services as $service) {
                             <div class="<?= cx(['col-1']) ?>">
 
                                 <div id="<?= cx(['category-accordion-',$category->term_id]) ?>" class="<?= cx(['accordion-container accordion-services']) ?>">
-                                <?php if (!empty($servicesByCategory)): ?>
-                                    <?php foreach ($servicesByCategory as $k => $categoryItem): ?>
+                                
+                                    <?php foreach ($services as $k => $serviceItem): ?>
                                         
-                                        <?php if ($category->term_id == (int)$categoryItem[0]['service-category']): ?>
+                                        <?php if ($category->term_id == (int)$serviceItem['service-category']): ?>
                                             <div class="<?= cx(['ac']) ?>">
                                                 <div class="<?= cx(['ac-header']) ?>">
                                                     <button type="<?= cx(['button']) ?>" class="<?= cx(['ac-trigger fw-500 fs-20 lh-24 color-101021']) ?>">
-                                                        <?= $categoryItem[0]['title'] ?>
+                                                        <?= $serviceItem['title'] ?>
                                                     </button>
-                                                </div>
+                                                </div> 
                                                 <div class="<?= cx(['ac-panel']) ?>">
                                                     <p class="<?= cx(['ac-text fw-400 fs-16 lh-24 color-101021']) ?>">
-                                                    <?= strip_tags($categoryItem[0]['desc']) ?>
+                                                        <?= strip_tags($serviceItem['desc']) ?>
                                                         <span>
-                                                            <a class="<?= cx(['link-btnxx']) ?>" href="<?= $categoryItem[0]['url'] ?>">
+                                                            <a class="<?= cx(['link-btnxx']) ?>" href="<?= $serviceItem['url'] ?>">
                                                             <?= __('Produkty', 'jcc-solutions') ?>
                                                             </a>
                                                         </span>
@@ -124,11 +124,11 @@ foreach ($services as $service) {
                                             </div>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
-                                <?php endif; ?>
+                                
                                 </div>
                             </div>
                             <div class="<?= cx(['col-2']) ?>">
-                                <div class="<?= cx(['swiper-slide cat-tab']) ?>" >
+                                <div class="<?= cx(['cat-tab']) ?>" >
                                     <img
                                     class="<?= cx(['services-img']) ?>"
                                     src="<?= $category->image_url ?>"

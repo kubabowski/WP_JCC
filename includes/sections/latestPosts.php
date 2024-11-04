@@ -14,7 +14,7 @@ $items = apply_filters('getKnowledges', [], [
 ]);
 
 $button = $props['button'] ?: [
-  'title' => __('Pokaż wszystkie artykuły', 'bud-went'),
+  'title' => __('Pokaż wszystkie artykuły', 'jcc-solutions'),
   'url' => get_post_type_archive_link('knowledge'),
 ];
 
@@ -61,7 +61,7 @@ $button = $props['button'] ?: [
                         'group-hover:translate-y-0 hover:text-neutral/80 transition-transform',
                       ]) ?>"
               href="<?= $item['url'] ?>">
-              <span><?= __('Czytaj cały artykuł', 'bud-went') ?></span>
+              <span><?= __('Czytaj cały artykuł', 'jcc-solutions') ?></span>
               <span><?= get_icon('arrow-right', 'icon') ?></span>
             </a>
           </div>

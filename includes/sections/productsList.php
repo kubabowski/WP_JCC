@@ -5,7 +5,7 @@
   $categoryTerm = $props['category'] ?? null;
   $manufacturerTerm = $props['manufacturer'] ?? null;
 
-  $listTitle = $categoryTerm ? $categoryTerm->name : __('Wszystkie produkty', 'bud-went');
+  $listTitle = $categoryTerm ? $categoryTerm->name : __('Wszystkie produkty', 'jcc-solutions');
   $backLink = $categoryTerm ? get_post_type_archive_link('product') : null;
 
   $page = $props['page'] ?? 1;
@@ -51,11 +51,11 @@
   $orderOptions = [
     [
       'value' => 'DESC',
-      'label' => __('Od najnowszych', 'bud-went'),
+      'label' => __('Od najnowszych', 'jcc-solutions'),
     ],
     [
       'value' => 'ASC',
-      'label' => __('Od najstarszych', 'bud-went'),
+      'label' => __('Od najstarszych', 'jcc-solutions'),
     ],
   ];
 
@@ -103,7 +103,7 @@
         <?php if ($categories): ?>
           <h2
             class="text-24px/1_2 font-medium mb-24px"
-          ><?= __('Kategoria', 'bud-went') ?>:</h2>
+          ><?= __('Kategoria', 'jcc-solutions') ?>:</h2>
 
           <ul class="block">
             <?php foreach ($categories as $category): ?>
@@ -131,7 +131,7 @@
               'text-24px/1_2 font-medium mb-24px',
               $categories ? 'mt-40px' : null,
             ]) ?>"
-          ><?= __('Producent', 'bud-went') ?>:</h2>
+          ><?= __('Producent', 'jcc-solutions') ?>:</h2>
 
           <ul class="flex flex-wrap gap-12px">
             <?php foreach ($manufacturers as $manufacturer): ?>
@@ -169,7 +169,7 @@
             ]) ?>"
           >
             <?php get_icon('long-arrow-left', 'icon text-24px/1 me-8px'); ?>
-            <span><?= __('Wróc', 'bud-went') ?></span>
+            <span><?= __('Wróc', 'jcc-solutions') ?></span>
           </a>
           <span class="w-px h-24px bg-border-gray mx-24px"></span>
           <?php endif; ?>
@@ -186,18 +186,18 @@
           <div class="flex items-center text-16px/1_2">
             <strong
               class="font-medium text-neutral-dark me-6px"
-            ><?= __('Produkty', 'bud-went') ?>:</strong>
+            ><?= __('Produkty', 'jcc-solutions') ?>:</strong>
             <span><?= $total ?></span>
           </div>
 
           <div class="flex items-center text-16px/1_2">
             <strong
               class="font-medium text-neutral-dark me-6px"
-            ><?= __('Na stronę', 'bud-went') ?>:</strong>
+            ><?= __('Na stronę', 'jcc-solutions') ?>:</strong>
             <select
               name="per_page"
               class="px-6px -mx-6px"
-              aria-label="<?= __('Wybierz liczbe produktów na stronie', 'bud-went') ?>"
+              aria-label="<?= __('Wybierz liczbe produktów na stronie', 'jcc-solutions') ?>"
               data-products-filters-select
             >
               <?php foreach ($perPageOptions as $perPageOption): ?>
@@ -212,11 +212,11 @@
           <div class="flex items-center text-16px/1_2">
             <strong
               class="font-medium text-neutral-dark me-6px"
-            ><?= __('Sortuj', 'bud-went') ?>:</strong>
+            ><?= __('Sortuj', 'jcc-solutions') ?>:</strong>
             <select
               name="order"
               class="px-6px -mx-6px"
-              aria-label="<?= __('Wybierz sortowanie', 'bud-went') ?>"
+              aria-label="<?= __('Wybierz sortowanie', 'jcc-solutions') ?>"
               data-products-filters-select
             >
               <?php foreach ($orderOptions as $orderOption): ?>
@@ -233,7 +233,7 @@
               type="search"
               name="search"
               value="<?= $search ?>"
-              placeholder="<?= __('Wpisz nazwę produktu', 'bud-went') ?>"
+              placeholder="<?= __('Wpisz nazwę produktu', 'jcc-solutions') ?>"
               class="block w-full h-[60px] bg-neutral/5 py-8px ps-16px pe-40px"
             >
             <button

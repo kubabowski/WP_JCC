@@ -2,7 +2,7 @@ class TestEntity {
     constructor(rootEl) {
       if (!this.setVars(rootEl)) return;
   
-      this.consoleTest(); 
+      this.init(); 
     }
   
     setVars(rootEl) {
@@ -14,7 +14,7 @@ class TestEntity {
       return true;
     }
   
-    consoleTest() {
+    init() {
       console.log('TestEntity initialized for element:', this.rootEl);
     }
   }

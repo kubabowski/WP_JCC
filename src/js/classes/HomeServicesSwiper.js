@@ -5,9 +5,7 @@ Swiper.use([Pagination, Navigation, Thumbs, EffectFade]);
 
 class ServicesSwiperEntity {
   constructor(rootEl) {
-    console.log("before seVars");
     if (!this.setVars(rootEl)) return; 
-    console.log("after seVars");
 
     this.initSwipers(); 
   }
@@ -21,9 +19,6 @@ class ServicesSwiperEntity {
 
     this.mainSliderEl = this.rootEl.querySelector('#services-swiper');
     if (!this.mainSliderEl) return false;
-
-    console.log(this.mainSliderEl); 
-    console.log(this.thumbsSliderEl); 
 
     return true; 
   }

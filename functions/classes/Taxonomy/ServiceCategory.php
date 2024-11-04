@@ -17,17 +17,17 @@ class ServiceCategory
   public function registerTaxonomy()
   {
     $labels = [
-      'name'              => __('Service Categories', 'bud-went'),
-      'singular_name'     => __('Service Category', 'bud-went'),
-      'search_items'      => __('Search Service Category', 'bud-went'),
-      'all_items'         => __('All Service Categories', 'bud-went'),
-      'parent_item'       => __('Parent Service Category', 'bud-went'),
-      'parent_item_colon' => __('Parent Service Category:', 'bud-went'),
-      'edit_item'         => __('Edit Service Category', 'bud-went'),
-      'update_item'       => __('Update Service Category', 'bud-went'),
-      'add_new_item'      => __('Add New Service Category', 'bud-went'),
-      'new_item_name'     => __('New Service Category Name', 'bud-went'),
-      'menu_name'         => __('Service Categories', 'bud-went'),
+      'name'              => __('Service Categories', 'jcc-solutions'),
+      'singular_name'     => __('Service Category', 'jcc-solutions'),
+      'search_items'      => __('Search Service Category', 'jcc-solutions'),
+      'all_items'         => __('All Service Categories', 'jcc-solutions'),
+      'parent_item'       => __('Parent Service Category', 'jcc-solutions'),
+      'parent_item_colon' => __('Parent Service Category:', 'jcc-solutions'),
+      'edit_item'         => __('Edit Service Category', 'jcc-solutions'),
+      'update_item'       => __('Update Service Category', 'jcc-solutions'),
+      'add_new_item'      => __('Add New Service Category', 'jcc-solutions'),
+      'new_item_name'     => __('New Service Category Name', 'jcc-solutions'),
+      'menu_name'         => __('Service Categories', 'jcc-solutions'),
     ];
 
     $args = [

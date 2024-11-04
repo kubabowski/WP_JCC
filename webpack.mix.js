@@ -13,7 +13,7 @@ const {
   MIX_SYNC,
 } = process.env;
 
-// mix.setPublicPath('./public');
+mix.setPublicPath('./public');
 
 mix.options({
   processCssUrls: false,
@@ -26,6 +26,7 @@ mix.js(
   `${MIX_DIR_DIST}core.js`,
 // ).extract();
 );
+
 
 // mix.sass(
 //   `${MIX_DIR_SRC}scss/core.scss`,
