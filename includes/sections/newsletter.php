@@ -7,13 +7,15 @@
 
   if (isset($props['class'])) $rootClass .= ' ' . $props['class'];
   if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];
+
 ?>
 
 
 <div class="inner top">
     <div class="container">
       <div class="newsletter-text">
-        
+        <h3 class="header color-000030 fw-500 fs-28 lh-36"><?= $props['title'] ?></h3>
+        <p class="color-000030 fs-16 lh-24"><?= $props['desc'] ?></p>
       </div>
       <div class="newsletter-input-container">
         <div class="newsletter-input">

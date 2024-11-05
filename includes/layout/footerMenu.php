@@ -2,8 +2,12 @@
   $rootClass = '';
   $rootAttr = '';
 
+
   if (isset($props['class'])) $rootClass .= ' ' . $props['class'];
   if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];
+
+
+  // var_dump($props);
 ?>
 <nav class="<?= $rootClass ?>"<?= $rootAttr ?>>
   <ul class="sm:columns-2 md:columns-3 lg:columns-2 xl:columns-3 gap-32px 2xl:gap-64px">

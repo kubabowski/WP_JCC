@@ -20,7 +20,7 @@
     get_part('sections/heroSlider');
     get_flexible();
     // get_part('sections/textFormRow', $staticFormProps);
-    get_part('sections/newsletter');
+    
   ?>
 </main>
 <?php
