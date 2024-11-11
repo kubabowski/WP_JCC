@@ -6,14 +6,15 @@
  $pageTitle = get_the_title() ?? 'No title';
 
   $categoryTerm = $props['category'] ?? null;
-  $items = $props['items'] ?? [];
 
   if (isset($props['class'])) $rootClass .= ' ' . $props['class'];
   if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];
+
+//var_dump($props);
 ?>
 <section>
 
-<div class="hero-categories-spacer-bg" style="background-image: url('<?= $Services['hero_image']['url'] ?>')"></div>
+<div class="hero-categories-spacer-bg" style="background-image: url('<?= $props['heroImage']['url'] ?>')"></div>
 
     <div class="hero-categories">
         <div class="hero-categories-container">
@@ -21,15 +22,15 @@
                 <?php get_part('layout/breadcrumbs', [
                     'items' => [
                         [
-                            'title' => __('Services', 'jcc-solutions'),
-                            'url' => get_post_type_archive_link('insight'),
+                            'title' => $props['title'],
+                            'url' => get_post_type_archive_link($props['post-type']),
                         ],
 
                     ],
                 ]); ?>
 
                 <h2 class="header fw-500 fs-56 lh-64 t-white">
-                    <?= $Services['header'] ?>
+                    <?= $props['title']?>
                 </h2>
 
                 <div class="hero-cat-line"></div>
@@ -39,7 +40,7 @@
                     <?php echo isset($heroCatFilterLabel) ? $heroCatFilterLabel : 'Filter by';  ?>:
                 </span>
 
-                    <?php echo file_get_contents(BASE_PATH . 'assets/icons/filter-arrow.svg'); ?>
+<!--                    --><?php //echo file_get_contents(BASE_PATH . 'assets/icons/filter-arrow.svg'); ?>
 
                 </div>
 
@@ -51,10 +52,11 @@
                             </a>
                         </li>
 
-                        <?php foreach ($CaseCatContent as $category): ?>
+                        <?php foreach ($props['categories'] as $category): ?>
                             <li>
-                                <a class="t-white fw-700 fs-12 lh-14 uppercase" href="?category_id=<?php echo $category['id']; ?>">
-                                    <?php  echo $category["name"]; ?>
+<!--                                --><?php //var_dump($category); ?>
+                                <a class="t-white fw-700 fs-12 lh-14 uppercase" href="<?php echo $category->slug; ?>">
+                                    <?php echo $category->name; ?>
                                 </a>
                             </li>
                         <?php endforeach; ?>
@@ -62,7 +64,12 @@
                 </div>
 
                 <div class="featured-case">
-                    <?php include BASE_PATH . '/components/featuredCase.php'; ?>
+                    <?php
+                    get_part('components/featuredItem', [
+                        'featured' => $props['featured']
+                    ]);
+                    ?>
+<!--                    --><?php //include BASE_PATH . '/components/featuredCase.php'; ?>
                 </div>
             </div>
         </div>

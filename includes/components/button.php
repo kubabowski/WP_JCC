@@ -29,9 +29,9 @@ foreach ($attrNames as $attrName) {
 $rootClass = cx([
   $isBlock ? 'flex' : 'inline-flex',
   'items-center',
-  $size === 'medium' ? 'min-h-[62px] px-20px py-8px text-16px/1_25 font-medium' : null,
-  $size === 'large' ? 'min-h-[68px] px-20px py-8px text-16px/1_25 font-medium' : null,
-  $size === 'small' ? 'min-h-[58px] px-20px py-8px text-16px/1_25 font-medium' : null,
+  $size === 'medium' ? 'btn btn-blue fw-500 fs-20' : null,
+  $size === 'large' ? 'btn btn-blue fw-500 fs-18' : null,
+  $size === 'small' ? 'btn btn-blue fw-500 fs-16' : null,
   $theme === 'default' ? 'custom-gradient-border' : null,
   ($theme === 'default' && !$isDisabled) ? 'custom-gradient-border hover:border-neutral-dark/30' : null,
   $theme === 'red' ? 'text-neutral-white bg-neutral-red' : null,

@@ -18,7 +18,7 @@
       add_filter('query_vars', [$this, 'addCustomQueryVars']);
     }
 
-    
+
 
     public function extendPostsWhere($where, $queryObj)
     {
@@ -50,6 +50,10 @@
 
     public function getPosts($args = [], $items = [])
     {
+        error_log("getPosts called with args: " . print_r($args, true));
+        error_log('getPosts filter called');
+        debug_backtrace();
+
 
       $lang = apply_filters('getCurrentLang', null);
 
@@ -83,10 +87,13 @@
       ];
 
       $items = get_posts($queryArgs);
+        error_log("get_posts returned items: " . print_r($items, true));
 
       $items = array_map(function($item) {
         return static::getPostDetails($item);
       }, $items);
+
+        var_dump($items);
 
       if (!isset($args['with_pages'])) return $items;
 
@@ -145,7 +152,6 @@
       ];
 
       static::extendTaxQuery($taxQuery, 'category', $args, 'category');
-      static::extendTaxQuery($taxQuery, 'manufacturer', $args, 'manufacturer');
       static::extendTaxQuery($taxQuery, 'tag', $args, 'tags');
 
       return $taxQuery;
@@ -181,6 +187,17 @@
       return $searchQuery;
     }
 
+      public function getDetailsById($postId)
+      {
+          if (empty($postId)) return null;
+
+          $post = get_post($postId);
+
+          if (!$post) return null;
+
+          return static::getPostDetails($post);
+      }
+
     public function getDetails($postObj)
     {
       return static::getPostDetails($postObj);
@@ -192,6 +209,8 @@
 
     static public function getPostDetails($postObj)
     {
+        error_log('$postObj is: '.$postObj);
+
       if (!is_object($postObj)) return null;
 
       $postId = $postObj->ID;

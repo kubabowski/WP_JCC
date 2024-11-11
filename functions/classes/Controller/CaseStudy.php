@@ -24,13 +24,13 @@
     {
       $postId = $postObj->ID;
 
-      $caseStudyData = get_field('case_study_data', $postId);
-      $description = $caseStudyData['description'] ?? '';
+      $caseStudyData = get_field('generic_post_data', $postId);
 
-      
+//      var_dump($postId);
+//      var_dump($caseStudyData);
+
       return array_merge($postDetails, [
-        'desc' => $description,
-        'image' => get_field('image', $postId),
+        'data' => $caseStudyData
       ]);
     }
 

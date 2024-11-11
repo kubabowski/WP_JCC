@@ -5,9 +5,9 @@ Swiper.use([Pagination, Navigation, Thumbs, EffectFade]);
 
 class ServicesSwiperEntity {
   constructor(rootEl) {
-    if (!this.setVars(rootEl)) return; 
+    if (!this.setVars(rootEl)) return;
 
-    this.initSwipers(); 
+    this.initSwipers();
   }
 
   setVars(rootEl) {
@@ -20,7 +20,7 @@ class ServicesSwiperEntity {
     this.mainSliderEl = this.rootEl.querySelector('#services-swiper');
     if (!this.mainSliderEl) return false;
 
-    return true; 
+    return true;
   }
 
   initSwipers() {
@@ -39,17 +39,16 @@ class ServicesSwiperEntity {
       effect: 'fade',
       allowTouchMove: false,
       centeredSlides: true,
+      navigation: {
+        nextEl: "#services-next",
+        prevEl: "#services-prev",
+      },
       thumbs: {
-        swiper: thumbsServicesSwiper, 
+        swiper: thumbsServicesSwiper,
       },
     });
 
-    document
-            .querySelectorAll(".accordion-services")
-            .forEach((accordionElement) => {
-                new Accordion(`#${accordionElement.id}`, {openOnInit: [0]});
-                console.log("accordionElement ", accordionElement.id, " initialized");
-            });
+
   }
 }
 
@@ -57,14 +56,14 @@ export default class ServicesSwiper {
   constructor() {
 
     this.entities = new Entities(
-      'ServicesSwiper',              
-      '#homeServices',            
-      ServicesSwiper.initSingle,       
+      'ServicesSwiper',
+      '#homeServices',
+      ServicesSwiper.initSingle,
     );
   }
 
   static initSingle(element) {
-    return new ServicesSwiperEntity(element); 
+    return new ServicesSwiperEntity(element);
   }
 }
 

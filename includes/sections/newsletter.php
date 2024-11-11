@@ -19,14 +19,16 @@
       </div>
       <div class="newsletter-input-container">
         <div class="newsletter-input">
+
+            <?= do_shortcode('[contact-form-7 id="99e2831" title="Newsletter"]') ?>
             <!-- <form id="newsletterForm">
                 <input name="email-newsletter" id="emailNewsletter" placeholder="<?php // echo $newsletterPlaceHolder ?>" />
                 <button class="btn btn-blue btn-lg fw-500 fs-14 lh-24" type="submit">Subscribe</button>
             </form>
-            
+
             <div id="responseMessage"></div> -->
-            
-            
+
+
         </div>
       </div>
     </div>

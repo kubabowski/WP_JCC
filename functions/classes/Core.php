@@ -24,7 +24,7 @@
 
       /* --- PostType --- */
       new PostType\Product();
-      new PostType\Service(); 
+      new PostType\Service();
       new PostType\CaseStudy();
       new PostType\Insight();
       // new PostType\Knowledge();
@@ -35,7 +35,6 @@
 
       /* --- Taxonomy --- */
       new Taxonomy\ProductCategory();
-      // new Taxonomy\ProductManufacturer();
       new Taxonomy\Company();
       new Taxonomy\Topic();
       new Taxonomy\ServiceCategory();
@@ -46,8 +45,9 @@
 
       /* --- Controller --- */
       new Controller\Product();
-      new Controller\Knowledge();
       new Controller\Service();
+      new Controller\CaseStudy();
+      new Controller\Insight();
       // new Controller\News();
       // new Controller\Form();
       // new Controller\OptionsPage();

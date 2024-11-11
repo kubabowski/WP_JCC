@@ -24,10 +24,11 @@
     {
       $postId = $postObj->ID;
 
-      return array_merge($postDetails, [
-        'text' => get_field('description', $postId),
-        'image' => get_field('image', $postId),
-      ]);
+      $insightData = get_field('generic_post_data', $postId);
+
+        return array_merge($postDetails, [
+            'data' => $insightData
+        ]);
     }
 
     static public function parseWysiwyg($content) {

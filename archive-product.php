@@ -14,6 +14,7 @@
   $search = get_query_var('search', '');
 ?>
 <main id="main" class="flex flex-col flex-grow mt-header-height">
+
   <?php
     get_part('layout/breadcrumbs', [
       'items' => [

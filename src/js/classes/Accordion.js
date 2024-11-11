@@ -215,14 +215,14 @@ export default class Accordion {
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize accordions from containers with data-accordion attribute
-  const accordionContainers = document.querySelectorAll('[data-accordion]');
-  accordionContainers.forEach((container) => {
-    new Accordion(container, { openOnInit: [0] });
-  });
+  // const accordionContainers = document.querySelectorAll('[data-accordion]');
+  // accordionContainers.forEach((container) => {
+  //   new Accordion(container, { openOnInit: [0] });
+  // });
 
   // Initialize accordions with the class "accordion-services"
   document.querySelectorAll(".accordion-services").forEach((accordionElement) => {
     new Accordion(accordionElement, { openOnInit: [0] });
-    console.log("accordionElement ", accordionElement.id, " initialized");
+
   });
 });

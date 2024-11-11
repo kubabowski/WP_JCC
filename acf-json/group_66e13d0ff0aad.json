@@ -1,6 +1,6 @@
 {
     "key": "group_66e13d0ff0aad",
-    "title": "Footer (options)",
+    "title": "(options) Footer",
     "fields": [
         {
             "key": "field_672a88344bc93",
@@ -257,5 +257,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730843291
+    "modified": 1731196455
 }

@@ -12,6 +12,7 @@ class ServiceCategory
   {
     add_action('init', [$this, 'registerTaxonomy']);
     add_filter('getServicesCategories', [$this, 'getServiceCategories']);
+
   }
 
   public function registerTaxonomy()
@@ -47,7 +48,7 @@ class ServiceCategory
 {
     $defaults = [
         'taxonomy'   => static::$taxonomyName,
-        'hide_empty' => false, 
+        'hide_empty' => false,
     ];
 
     $args = wp_parse_args($args, $defaults);

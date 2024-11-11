@@ -8,59 +8,34 @@
 
   if (isset($props['class'])) $rootClass .= ' ' . $props['class'];
   if (isset($props['attr'])) $rootAttr .= ' ' . $props['attr'];
-?>
-<section>
-  
 
+    $products = apply_filters('getProducts', [], []);
 
-<?php
+    $services = apply_filters('getServices', [], []);
 
 
 
-// $titlesServices = array_map(function($categoryTitle) {
-//     return isset($categoryTitle->title) ? $categoryTitle->title : '';
-// }, $servicesCategories);
+//apply_filters('getMenuTree', [], 'header_menu');
+    // var_dump($services);
 
+    $servicesCategories = apply_filters('getServicesCategories', [], [
+        'category' => $categoryTerm ? $categoryTerm->slug : null,
+    ]);
 
-$services = apply_filters('getServices', [], []);
-// var_dump($services);
+    foreach ($servicesCategories as $term) {
+        $image_id = get_term_meta($term->term_id, 'tax_image', true);
+        $image_url = wp_get_attachment_url($image_id);
 
-$servicesCategories = apply_filters('getServicesCategories', [], [ 
-    'category' => $categoryTerm ? $categoryTerm->slug : null,
-]);
-
-foreach ($servicesCategories as $term) {
-    // Retrieve the image URL stored in the custom field 'tax_image'.
-    // $image_url = get_term_meta($term->term_id, 'tax_image', true);
-    $image_id = get_term_meta($term->term_id, 'tax_image', true);
-    
-    $image_url = wp_get_attachment_url($image_id);
-
-    // Add the image URL to the term object.
-    $term->image_url = $image_url ? $image_url : null; // Use null or a placeholder if no image is set.
-}
-
-// Debug to see the updated terms with images.
-// var_dump($servicesCategories);
-
-$servicesByCategory = [];
-foreach ($services as $service) {
-    $serviceCategoryId = $service['service-category'];
-    
-    if (!isset($servicesByCategory[$serviceCategoryId])) {
-        $servicesByCategory[$serviceCategoryId] = [];
+        $term->image_url = $image_url ? $image_url : null;
     }
 
-    $servicesByCategory[$serviceCategoryId][] = $service;
-}
-
-// var_dump($servicesCategories);
-// var_dump($servicesByCategory);
-// var_dump($services);
+//
+//error_log(print_r($services, true));
+//error_log(print_r($servicesCategories, true));
 
 ?>
 
-
+<section>
 <div id="homeServices" class="services">
     <div class="container">
         <h3 class="h5 fw-900 fs-20 lh-32 color-000030"><?= $props['title'] ?></h3>
@@ -81,37 +56,36 @@ foreach ($services as $service) {
 
             <div class="col-2 flex-between align-center">
                 <div class="flex">
-                    <!-- <div id="services-prev" class="swiper-button-prev"></div>
-                    <div id="services-next" class="swiper-button-next"></div> -->
+                     <div id="services-prev" class="swiper-button-prev"></div>
+                    <div id="services-next" class="swiper-button-next"></div>
                 </div>
-                    <a class="link-btn fw-500 fs-16 lh-22" href="<?= $props['link']['url'] ?>">
-                        <?= $props['link']['title'] ?>
-                    </a>
+                <a class="link-btn fw-500 fs-16 lh-22" href="<?= $props['link']['url'] ?>">
+                    <?= $props['link']['title'] ?>
+                </a>
             </div>
         </div>
-        
+
 
         <div id="services-swiper" class="swiper mySwiper">
             <div class="swiper-wrapper">
-            
+
                 <?php foreach ($servicesCategories as $k => $category): ?>
-                    
+
                     <div class="<?= cx(['swiper-slide']) ?>" >
                         <div class="<?= cx(['slide-content']) ?>">
                             <div class="<?= cx(['col-1']) ?>">
 
                                 <div id="accordion-services-<?php echo $category->term_id ?>" class="<?= cx(['accordion-container accordion-services']) ?>">
-                                
+
                                     <?php foreach ($services as $k => $serviceItem): ?>
-                                        
-                                        <?php if ($category->term_id == (int)$serviceItem['service-category']): ?>
+                                        <?php if ($category->term_id == (int)$serviceItem['item-category'][0]->term_id): ?>
                                             <div class="<?= cx(['ac']) ?>">
-                                                
+
                                                 <div class="<?= cx(['ac-header']) ?>">
                                                     <button type="<?= cx(['button']) ?>" class="<?= cx(['ac-trigger fw-500 fs-20 lh-24 color-101021']) ?>">
                                                         <?= $serviceItem['title'] ?>
                                                     </button>
-                                                </div> 
+                                                </div>
                                                 <div class="<?= cx(['ac-panel']) ?>">
                                                     <p class="<?= cx(['ac-text fw-400 fs-16 lh-24 color-101021']) ?>">
                                                         <?= strip_tags($serviceItem['desc']) ?>
@@ -125,7 +99,7 @@ foreach ($services as $service) {
                                             </div>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
-                                
+
                                 </div>
                             </div>
                             <div class="<?= cx(['col-2']) ?>">

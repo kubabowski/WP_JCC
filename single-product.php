@@ -10,6 +10,7 @@
   $productData = get_field('product_data') ?? [];
 ?>
 <main id="main" class="flex flex-col flex-grow mt-header-height">
+    <?php echo do_shortcode('[rt_reading_time label="Reading Time:" postfix="minutes"]'); ?>
   <?php
     get_part('layout/breadcrumbs', [
       'items' => [

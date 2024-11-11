@@ -23,16 +23,18 @@
     static public function extendPostDetails($postObj, $postDetails)
     {
       $postId = $postObj->ID;
-      $serviceCategories = wp_get_post_terms($postId, 'service-category', ['fields' => 'ids']);
+      $serviceCategories = wp_get_post_terms($postId, 'service-category', ['fields' => 'all']);
 
+//      $serviceData = get_field('service_data', $postId);
       $serviceData = get_field('service_data', $postId);
       $description = $serviceData['description'] ?? '';
 
-      
+
       return array_merge($postDetails, [
         'desc' => $description,
+        'serviceData' => $serviceData,
         'image' => get_field('image', $postId),
-        'service-category' => $serviceCategories ? implode(', ', $serviceCategories) : null,
+        'item-category' => $serviceCategories ?  $serviceCategories : null,
       ]);
     }
 

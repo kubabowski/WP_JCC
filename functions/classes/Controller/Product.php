@@ -20,16 +20,16 @@
       add_filter('parse' . static::$postTypePrefix . 'Wysiwyg', [$this, 'parseWysiwyg'], 10, 2);
     }
 
-    static public function extendPostDetails($postObj, $postDetails)
-    {
-      $postId = $postObj->ID;
+      static public function extendPostDetails($postObj, $postDetails)
+      {
+          $postId = $postObj->ID;
 
-      return array_merge($postDetails, [
-        'text' => get_field('description', $postId),
-        'image' => get_field('image', $postId),
-        'promotion' => get_field('product_promotion', $postId) ?? false,
-      ]);
-    }
+          $productData = get_field('generic_post_data', $postId);
+
+          return array_merge($postDetails, [
+              'data' => $productData
+          ]);
+      }
 
     static public function parseWysiwyg($content) {
       // mark floating image paragraph

@@ -8,22 +8,24 @@ import HeaderScroll from './shared/HeaderScroll';
 import HeroHomeSwiper from './HomeBannerSwiper';
 import HeroHomeControl from './HeroSwiperControl';
 import Accordion from './Accordion';
+import CaseInsightSwiper from './HomeCaseStudiesSwiper';
 
 export default class Core {
   constructor() {
     new LiteEvents();
-    new MobileMenu(); 
-    new HeaderScroll(); 
- 
+    new MobileMenu();
+    new HeaderScroll();
+
     new Test();
 
     new HeroHomeSwiper();
     new HomeServicesSwiper();
+    new CaseInsightSwiper();
     new HeroHomeControl();
     new Accordion();
 
 
-   
+
   }
 }
 

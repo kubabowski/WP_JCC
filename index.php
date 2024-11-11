@@ -4,7 +4,7 @@
   $pageTitle = get_the_title() ?? 'No title';
   $pageDescription = get_field('description') ?? '';
 ?>
-<main id="main" class="flex flex-col flex-grow mt-header-height">
+<main id="main" class="">
   <?php
     get_part('layout/breadcrumbs', [
       'items' => [
@@ -24,4 +24,4 @@
 <?php
   get_footer();
 
-  
+
